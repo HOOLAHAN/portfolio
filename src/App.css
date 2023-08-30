@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+}
+
+.project-card img {
+  max-width: 100%;
+}
