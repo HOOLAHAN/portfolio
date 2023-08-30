@@ -1,5 +1,5 @@
 // src/App.tsx
-
+import './App.css';
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import projects from './projectsData';
