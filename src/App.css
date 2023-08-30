@@ -56,7 +56,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   margin: 16px;
-  flex-basis: calc(33.333% - 32px);
+  flex-basis: calc(50% - 32px);
   box-sizing: border-box;
   text-align: center;
   transition: box-shadow 0.3s ease;
@@ -106,13 +106,22 @@
 }
 
 .visit-button {
-  background: #007bff;
+  background: linear-gradient(45deg, #6200ea, #03dac6);
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 12px;
   text-decoration: none;
-  margin-top: 10px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
   display: inline-block;
+}
+
+.visit-button:hover {
+  background: linear-gradient(45deg, #3700b3, #018786);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
 }
 
 .thumbnail-logo {
