@@ -1,8 +1,7 @@
-// src/ProjectCard.tsx
 import React from 'react';
 import { Project } from './projectsData';
 
-const ProjectCard: React.FC<Project> = ({ title, logo, description, url, technologies }) => {
+const ProjectCard: React.FC<Project> = ({ title, logo, description, url, client_repo, server_repo, technologies }) => {
   return (
     <div className="project-card">
       <h3>{title}</h3>
@@ -27,8 +26,18 @@ const ProjectCard: React.FC<Project> = ({ title, logo, description, url, technol
             ))}
           </div>
         </div>
+        {client_repo && client_repo.length > 3 && (
+          <a className="visit-button" href={client_repo} target="_blank" rel="noopener noreferrer">
+            Client Repo
+          </a>
+        )}
+        {server_repo && server_repo.length > 3 && (
+          <a className="visit-button" href={server_repo} target="_blank" rel="noopener noreferrer">
+            Server Repo
+          </a>
+        )}
         <a className="visit-button" href={url} target="_blank" rel="noopener noreferrer">
-          Visit Project
+          Visit Web Page
         </a>
       </div>
     </div>
