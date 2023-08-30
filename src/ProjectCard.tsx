@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project } from './projectsData';
 
-const ProjectCard: React.FC<Project> = ({ title, logo, description, url, client_repo, server_repo, technologies }) => {
+const ProjectCard: React.FC<Project> = ({ title, logo, description, url, client_repo, server_repo, technologies, features }) => {
   return (
     <div className="project-card">
       <h3>{title}</h3>
@@ -26,6 +26,16 @@ const ProjectCard: React.FC<Project> = ({ title, logo, description, url, client_
             ))}
           </div>
         </div>
+        {features && (
+          <div className="features">
+            <strong>Features:</strong>
+            <ul>
+              {features.map(([featureName, featureDesc], index) => (
+                <li key={index}><strong>{featureName}:</strong> {featureDesc}</li>
+              ))}
+            </ul>
+          </div>
+        )}
         {client_repo && client_repo.length > 3 && (
           <a className="visit-button" href={client_repo} target="_blank" rel="noopener noreferrer">
             Client Repo
@@ -45,3 +55,4 @@ const ProjectCard: React.FC<Project> = ({ title, logo, description, url, client_
 }
 
 export default ProjectCard;
+
