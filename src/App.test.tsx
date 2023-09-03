@@ -11,6 +11,11 @@ describe('App', () => {
     expect(titleElement).toBeInTheDocument();
   });
 
+  it('should update the document title', () => {
+    render(<App />);
+    expect(document.title).toEqual('Iain Hoolahan');
+  });
+
   it('should render the list of projects', () => {
     render(<App />);
     projects.forEach(project => {
