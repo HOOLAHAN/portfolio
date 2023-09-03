@@ -7,6 +7,7 @@ import harbourContractors from './logos/harbourcontractors.svg';
 export interface Project {
   title: string;
   logo: string;
+  altTextLogo: string;
   description: string;
   url: string;
   client_repo: string;
@@ -19,6 +20,7 @@ const projects: Project[] = [
   {
     title: "Tipsy Tourist",
     logo: tipsyTouristLogo,
+    altTextLogo: "Tipsy Tourist",
     description: "A web page to generate a pub crawl/tourist attractions itinerary",
     url: "http://www.tipsytourist.org/",
     client_repo: "https://github.com/HOOLAHAN/tipsy-tourist",
@@ -36,8 +38,9 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "StratoStruct",
+    title: "",
     logo: stratoStructLogo,
+    altTextLogo: "StratoStruct",
     description: "A web page to find local suppliers of prefabricated construction products ranked by proximity",
     url: "http://www.stratostruct.com",
     client_repo: "https://github.com/HOOLAHAN/stratostruct_client",
@@ -58,8 +61,9 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Find A Film",
+    title: "",
     logo: findAFilmLogo,
+    altTextLogo: "Find A Film",
     description: "A web page to search for films to watch",
     url: "http://findafilm.s3-website.eu-west-2.amazonaws.com/",
     client_repo: "https://github.com/HOOLAHAN/Find_A_Film",
@@ -80,8 +84,9 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "Harbour Contractors Ltd",
+    title: "",
     logo: harbourContractors,
+    altTextLogo: "Harbour Contractors Ltd",
     description: "A company website showcasing projects and services",
     url: "http://www.harbourcontractors.co.uk/",
     client_repo: "https://github.com/HOOLAHAN/harbour_contractors_client",
