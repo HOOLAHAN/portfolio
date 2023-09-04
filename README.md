@@ -1,46 +1,47 @@
-# Getting Started with Create React App
+# Iain Hoolahan's Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**[Website](http://www.iainhoolahan.com/)**
 
-## Available Scripts
+## Overview
+This project is a portfolio website developed using React and Chakra UI. It showcases projects, work experience, and educational background. The project aims to be a comprehensive and interactive resume for anyone interested in learning more about Iain Hoolahan's work and experience.
 
-In the project directory, you can run:
+## Features
+About: Brief introduction and navigation links.
+Projects: Displays a grid of project cards, with detailed information available in modal windows.
+Work Experience: Lists job experience with details about responsibilities and timelines.
+Education: Provides an educational background with relevant courses and degrees.
 
-### `npm start`
+## Technologies Used
+- React
+- TypeScript
+- Chakra UI
+- CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
+To get started, clone the repository to your local machine:
+````
+git clone https://github.com/username/portfolio.git
+````
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Navigate to the project directory:
+````
+cd portfolio
+````
 
-### `npm test`
+Install the required dependencies:
+````
+npm install
+````
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the development server:
+````
+npm start
+````
 
-### `npm run build`
+The website should now be running on http://localhost:3000/.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Contributing
+If you find a bug or have a suggestion, feel free to create an issue or make a pull request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Author
+Iain Hoolahan
