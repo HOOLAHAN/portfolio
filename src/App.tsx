@@ -39,7 +39,7 @@ const App: React.FC = () => {
           educationRef={educationRef} 
         />
         <Heading ref={projectsRef} size="lg" my="4">Projects</Heading>
-        <Box display="flex" gridGap="4">
+        <Box display="flex" flexWrap="wrap" gridGap="4" justifyContent="center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
           ))}

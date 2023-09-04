@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Box, Heading, Text, Button, HStack, Link, useBreakpointValue } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 
 interface AboutProps {
   scrollToRef: (ref: React.MutableRefObject<any>) => void;
@@ -32,14 +32,34 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
               LinkedIn
             </Button>
           </Link>
-          <Button as="a" href="/Iain_Hoolahan_CV.pdf" target="_blank" rel="noopener noreferrer">
-            View CV
-          </Button>
+          <Link href="/Iain_Hoolahan_CV.pdf" isExternal target="_blank" rel="noopener noreferrer">
+            <Button colorScheme="purple" leftIcon={<FaFilePdf />} size="sm">
+              CV
+            </Button>
+          </Link>
         </HStack>
         <Box>
-          <Button onClick={() => scrollToRef(projectsRef)}>Projects</Button>
-          <Button onClick={() => scrollToRef(experienceRef)}>Work Experience</Button>
-          <Button onClick={() => scrollToRef(educationRef)}>Education</Button>
+          <Button
+            onClick={() => scrollToRef(projectsRef)}
+            variant="ghost"
+            _hover={{ boxShadow: 'md' }}
+          >
+            - Projects
+          </Button>
+          <Button
+            onClick={() => scrollToRef(experienceRef)}
+            variant="ghost"
+            _hover={{ boxShadow: 'md' }}
+          >
+            - Work Experience
+          </Button>
+          <Button
+            onClick={() => scrollToRef(educationRef)}
+            variant="ghost"
+            _hover={{ boxShadow: 'md' }}
+          >
+            - Education
+          </Button>
         </Box>
       </Box>
       <Box flex="2" mt={{ base: '4', md: '0' }}>

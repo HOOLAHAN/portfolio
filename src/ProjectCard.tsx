@@ -1,8 +1,7 @@
 import React from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
-import { FaEye } from 'react-icons/fa'; 
 import { Project } from './projectsData';
-
+import { ViewIcon } from '@chakra-ui/icons';
 
 type ProjectCardProps = {
   project: Project;
@@ -11,7 +10,11 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   return (
-    <Box 
+    <Box
+      padding={3}
+      width="300px"
+      maxWidth="100%"
+      borderRadius="md"
       position="relative" 
       onClick={onClick} 
       cursor="pointer"
@@ -25,18 +28,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       <Image 
         src={project.logo} 
         alt={project.altTextLogo} 
-        width="200px" 
-        height="200px" 
+        height="100px" 
         objectFit="contain"
-      />
-      <Text>{project.title}</Text>
+        />
+      <Text>{project.title} - {project.description}</Text>
       <Box 
         position="absolute" 
         top="10px" 
         right="10px" 
         opacity="0"
-      >
-        <FaEye size={24} />
+        >
+        <ViewIcon boxSize={6} />
       </Box>
     </Box>
   );
