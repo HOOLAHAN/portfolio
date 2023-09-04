@@ -3,6 +3,12 @@ import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import projects from './projectsData';
 
+jest.mock('@chakra-ui/react', () => ({
+  ...jest.requireActual('@chakra-ui/react'),
+  useBreakpointValue: jest.fn().mockReturnValue('column'),
+}));
+
+
 describe('App', () => {
 
   it('renders project cards', () => {
@@ -10,9 +16,10 @@ describe('App', () => {
     expect(screen.getByAltText(projects[0].altTextLogo)).toBeInTheDocument();
   });
 
-  it('opens modal on project card click', () => {
+  it('opens modal on project card click', async () => {
     render(<App />);
     fireEvent.click(screen.getByAltText(projects[0].altTextLogo));
-    expect(screen.getByText(projects[0].description)).toBeInTheDocument();
+    const descriptionElement = await screen.findByText(projects[0].description);
+    expect(descriptionElement).toBeInTheDocument();
   });
 });
