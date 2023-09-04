@@ -33,6 +33,11 @@ Install the required dependencies:
 npm install
 ````
 
+To run the testt:
+````
+npm test
+````
+
 To run the development server:
 ````
 npm start
