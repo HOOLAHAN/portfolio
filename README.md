@@ -33,7 +33,7 @@ Install the required dependencies:
 npm install
 ````
 
-To run the testt:
+To run the tests:
 ````
 npm test
 ````
