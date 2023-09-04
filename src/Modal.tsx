@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from './projectsData'; // Import the Project type
+import { Project } from './projectsData';
 import {
   Box,
   Modal as ChakraModal,
@@ -10,16 +10,28 @@ import {
   ModalBody,
   ModalCloseButton,
   Text,
-  Link,
   Button,
+  Tag,
+  Wrap,
+  WrapItem,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
 } from '@chakra-ui/react';
 
 type ModalProps = {
-  project: Project; // Use the Project type here
+  project: Project;
   onClose: () => void;
 };
 
 const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
+
+  const navigateToLink = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <ChakraModal isOpen={true} onClose={onClose}>
       <ModalOverlay />
@@ -28,17 +40,27 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <Text mb={2}>{project.description}</Text>
-          <Text fontWeight="bold">Technologies Used:</Text>
-          <ul>
+          <Text fontWeight="bold" mb={2}>Technologies Used:</Text>
+          <Wrap>
             {project.technologies.map((tech, index) => (
-              <li key={index}>{tech}</li>
+              <WrapItem key={index}>
+                <Tag size="md" variant="solid" colorScheme="blue">
+                  {tech}
+                </Tag>
+              </WrapItem>
             ))}
-          </ul>
+          </Wrap>
           <Box mt={4}>
-            <Text fontWeight="bold">Link:</Text>
-            <Link href={project.url} isExternal>
-              Visit the project
-            </Link>
+            <Text fontWeight="bold">Links:</Text>
+            <Button colorScheme="blue" onClick={() => navigateToLink(project.url)}>
+              Web Page
+            </Button>
+            <Button colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
+              Github Repo - Client
+            </Button>
+            <Button colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
+              Github Repo - Server
+            </Button>
           </Box>
           <Box mt={4}>
             <Text fontWeight="bold">Website Preview:</Text>
@@ -50,6 +72,24 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
               style={{ border: '1px solid #ccc' }}
             />
           </Box>
+          <Box mt={4}>
+          <Text fontWeight="bold">Features:</Text>
+            <Accordion allowToggle>
+              {project.features.map((feature, index) => (
+                <AccordionItem key={index}>
+                  <AccordionButton>
+                    <Box flex="1" textAlign="left">
+                      {feature[0]}
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                  <AccordionPanel pb={4}>
+                    {feature[1]}
+                  </AccordionPanel>
+                </AccordionItem>
+              ))}
+            </Accordion>
+        </Box>
         </ModalBody>
         <ModalFooter>
           <Button colorScheme="blue" mr={3} onClick={onClose}>
