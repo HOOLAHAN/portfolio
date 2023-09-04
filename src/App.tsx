@@ -1,25 +1,35 @@
-// src/App.tsx
-import './App.css';
-import React, { useEffect } from 'react'; // Import useEffect
+import React, { useState } from 'react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
+import projects, { Project } from './projectsData';
 import ProjectCard from './ProjectCard';
-import projects from './projectsData';
+import Modal from './Modal';
 
 const App: React.FC = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    document.title = 'Iain Hoolahan';
-  }, []); // Empty dependency array means this effect runs once when the component mounts
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedProject(null);
+  };
 
   return (
-    <div className="App">
-      <h1>My Portfolio</h1>
-      <div className="project-list">
-        {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
-        ))}
-      </div>
-    </div>
+    <ChakraProvider>
+      <Box p="6">
+        <Box display="flex" gridGap="4">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
+          ))}
+        </Box>
+        {showModal && selectedProject && <Modal project={selectedProject} onClose={handleCloseModal} />}
+      </Box>
+    </ChakraProvider>
   );
-}
+};
 
 export default App;

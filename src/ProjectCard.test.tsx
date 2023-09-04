@@ -1,31 +1,20 @@
-// src/ProjectCard.test.tsx
-
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import ProjectCard from './ProjectCard';
+import projects from './projectsData';
 
 describe('ProjectCard', () => {
-  const mockProject = {
-    title: "Mock Project",
-    logo: "mock_logo.svg",
-    description: "This is a mock project",
-    url: "http://www.mockproject.com/",
-    client_repo: "http://github.com/mock/client_repo",
-    server_repo: "http://github.com/mock/server_repo",
-    technologies: ["React", "TypeScript"],
-    features: [["Mock feature 1", "Mock description 1"]] as [string, string][]
-  };
+  const mockOnClick = jest.fn();
+  const project = projects[0]; // Using the first project as example
 
-  it('should render project title', () => {
-    render(<ProjectCard {...(mockProject as any)} />);
-    const titleElements = screen.getAllByText(/Mock Project/i);
-    expect(titleElements.length).toBe(2);
-    expect(titleElements[0]).toBeInTheDocument();
+  it('renders project logo correctly', () => {
+    render(<ProjectCard project={project} onClick={mockOnClick} />);
+    expect(screen.getByAltText(project.altTextLogo)).toBeInTheDocument();
   });
 
-  it('should render project description', () => {
-    render(<ProjectCard {...(mockProject as any)} />);
-    const descriptionElement = screen.getByText(/This is a mock project/i);
-    expect(descriptionElement).toBeInTheDocument();
+  it('calls onClick when clicked', () => {
+    render(<ProjectCard project={project} onClick={mockOnClick} />);
+    fireEvent.click(screen.getByAltText(project.altTextLogo));
+    expect(mockOnClick).toHaveBeenCalled();
   });
-
 });

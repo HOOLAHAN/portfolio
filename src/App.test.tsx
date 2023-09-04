@@ -1,29 +1,18 @@
-// src/App.test.tsx
-
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 import projects from './projectsData';
 
 describe('App', () => {
-  it('should render the app title', () => {
+
+  it('renders project cards', () => {
     render(<App />);
-    const titleElement = screen.getByText(/My Portfolio/i);
-    expect(titleElement).toBeInTheDocument();
+    expect(screen.getByAltText(projects[0].altTextLogo)).toBeInTheDocument();
   });
 
-  it('should update the document title', () => {
+  it('opens modal on project card click', () => {
     render(<App />);
-    expect(document.title).toEqual('Iain Hoolahan');
+    fireEvent.click(screen.getByAltText(projects[0].altTextLogo));
+    expect(screen.getByText(projects[0].description)).toBeInTheDocument();
   });
-
-  it('should render the list of projects', () => {
-    render(<App />);
-    projects.forEach(project => {
-      const titleElements = screen.getAllByText(new RegExp(project.title, 'i'));
-      titleElements.forEach(titleElement => {
-        expect(titleElement).toBeInTheDocument();
-      });
-    });
-  });
-  
 });
