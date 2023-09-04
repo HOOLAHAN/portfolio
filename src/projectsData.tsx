@@ -38,7 +38,7 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "",
+    title: "StratoStruct",
     logo: stratoStructLogo,
     altTextLogo: "StratoStruct",
     description: "A web page to find local suppliers of prefabricated construction products ranked by proximity",
@@ -61,7 +61,7 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "",
+    title: "Find A Film",
     logo: findAFilmLogo,
     altTextLogo: "Find A Film",
     description: "A web page to search for films to watch",
@@ -84,7 +84,7 @@ const projects: Project[] = [
     ]
   },
   {
-    title: "",
+    title: "Harbour Contractors Ltd",
     logo: harbourContractors,
     altTextLogo: "Harbour Contractors Ltd",
     description: "A company website showcasing projects and services",
