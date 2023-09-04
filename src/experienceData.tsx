@@ -1,9 +1,14 @@
 // experienceData.ts
+import LORlogo from './logos/LOR.png';
+import harbourContractors from './logos/harbourcontractors.svg';
+import PFGeomatics from './logos/PFG.jpeg'
 
 type Experience = {
   jobTitle: string;
   company: string;
+  logo: string;
   duration: string;
+  website: string;
   responsibilities: string[];
 };
 
@@ -11,7 +16,9 @@ const experienceData: Experience[] = [
   {
     jobTitle: "Engineer / Surveyor",
     company: "Freelance",
+    logo: PFGeomatics,
     duration: "Apr 2023 - Present",
+    website: "",
     responsibilities: [
       "Working on Gatwick Airport train station for roofing/cladding specialist sub-contractor.",
       "Collaborated with client to understand project requirements and objectives, ensuring effective communication.",
@@ -21,9 +28,11 @@ const experienceData: Experience[] = [
     ],
   },
   {
-    jobTitle: "Director",
+    jobTitle: "Director / Project Manager",
     company: "Harbour Contractors Ltd",
+    logo: harbourContractors,
     duration: "Sept 2020 - Aug 2022",
+    website: "http://www.harbourcontractors.co.uk/",
     responsibilities: [
       "Co-founded and managed a successful construction management firm that specialised in domestic projects, overseeing a £1.9M new-build project and an £800K extension for private clients.",
       "Demonstrated expert project management and organisational skills to take ownership of the entire process from start to finish",
@@ -34,7 +43,9 @@ const experienceData: Experience[] = [
   {
     jobTitle: "Civil Engineer",
     company: "Laing O'Rourke",
+    logo: LORlogo,
     duration: "Sep 2015 - Aug 2020",
+    website: "https://www.laingorourke.com/",
     responsibilities: [
       "Successfully managed quality processes, client relationships and technical challenges for the Hinkley Point C nuclear power station project while also mentoring junior engineers.",
       "Managed sub-contract installation of fit-out packages at the Liverpool Street Station job site as part of the Crossrail project.",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Heading, Text, List, ListItem, ListIcon } from '@chakra-ui/react';
+import { Box, Heading, Text, List, ListItem, ListIcon, Link, Image } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
 import experienceData from './experienceData'; 
 
@@ -8,11 +8,27 @@ const ExperienceCard: React.FC = () => {
     <>
       {experienceData.map((experience, index) => (
         <Box borderWidth={1} borderRadius="md" p="4" mb="4" boxShadow="md" key={index}>
-          <Heading size="md" mb="2">
-            {experience.jobTitle}
-          </Heading>
+          <Box display="flex" alignItems="center" mb="2">
+            {experience.logo && (
+              <Image 
+                src={experience.logo}
+                alt={`${experience.company} logo`}
+                maxH="30px"
+                mr="4"
+              />
+            )}
+            <Heading size="md">
+              {experience.jobTitle}
+            </Heading>
+          </Box>
           <Text fontWeight="bold" mb="2">
-            {experience.company}
+            {experience.website ? (
+              <Link href={experience.website} isExternal>
+                {experience.company}
+              </Link>
+            ) : (
+              experience.company
+            )}
           </Text>
           <Text fontSize="sm" color="gray.500" mb="3">
             {experience.duration}
