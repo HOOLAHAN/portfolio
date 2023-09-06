@@ -52,13 +52,13 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
           </Wrap>
           <Box mt={4}>
             <Text fontWeight="bold">Links:</Text>
-            <Button colorScheme="blue" onClick={() => navigateToLink(project.url)}>
+            <Button mr={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
               Web Page
             </Button>
-            <Button colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
+            <Button mr={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
               Github Repo - Client
             </Button>
-            <Button colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
+            <Button mr={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
               Github Repo - Server
             </Button>
           </Box>
