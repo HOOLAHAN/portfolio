@@ -1,17 +1,20 @@
 import React, { useState, useRef } from 'react';
-import { ChakraProvider, Box, Heading } from '@chakra-ui/react';
+import { ChakraProvider, Box, Heading, extendTheme } from '@chakra-ui/react';
 import projects, { Project } from './projectsData';
 import ProjectCard from './ProjectCard';
 import Modal from './Modal';
 import About from './About';
 import ExperienceCard from './ExperienceCard';
 import EducationCard from './EducationCard';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+
+const theme = extendTheme({
+});
 
 const App: React.FC = () => {
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
   const educationRef = useRef(null);
-
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -30,7 +33,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
+      <Box position="fixed" top="1rem" right="1rem">
+        <ColorModeSwitcher />
+      </Box>
        <Box p="6">
         <About
             scrollToRef={scrollToRef}
