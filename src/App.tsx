@@ -6,7 +6,6 @@ import Modal from './Modal';
 import About from './About';
 import ExperienceCard from './ExperienceCard';
 import EducationCard from './EducationCard';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 const theme = extendTheme({
 });
@@ -34,9 +33,6 @@ const App: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
-      <Box position="fixed" top="1rem" right="1rem">
-        <ColorModeSwitcher />
-      </Box>
        <Box p="6">
         <About
             scrollToRef={scrollToRef}

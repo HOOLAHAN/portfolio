@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex, Box, Heading, Text, Button, VStack, Link, HStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import ProfilePicture from './ProfilePicture';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
 
 interface AboutProps {
   scrollToRef: (ref: React.MutableRefObject<any>) => void;
@@ -52,6 +53,7 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
                 CV
               </Button>
             </Link>
+            <ColorModeSwitcher />
           </HStack>
 
           {/* Scroll to Section Buttons */}
