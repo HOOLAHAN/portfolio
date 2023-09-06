@@ -26,10 +26,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       }}
     >
       <Image 
-        src={project.logo} 
-        alt={project.altTextLogo} 
-        height="100px" 
+        src={project.logo}
+        alt={project.altTextLogo}
+        height="100px"
         objectFit="contain"
+        bgColor="white"
+        p={1}
+        borderRadius="md"
         />
       <Text>{project.title} - {project.description}</Text>
       <Box 
