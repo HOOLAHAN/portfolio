@@ -31,14 +31,14 @@ const App: React.FC = () => {
 
   return (
     <ChakraProvider>
-      <Box p="6">
-        <About 
-          scrollToRef={scrollToRef} 
-          projectsRef={projectsRef} 
-          experienceRef={experienceRef} 
-          educationRef={educationRef} 
+       <Box p="6">
+        <About
+            scrollToRef={scrollToRef}
+            projectsRef={projectsRef}
+            experienceRef={experienceRef}
+            educationRef={educationRef}
         />
-        <Heading ref={projectsRef} size="lg" my="4">Projects</Heading>
+       <Heading ref={projectsRef} size="lg" my="4">Projects</Heading>
         <Box display="flex" flexWrap="wrap" gridGap="4" justifyContent="center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
