@@ -21,23 +21,23 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
       overflowX={{ base: "auto", md: "visible" }}
     >
       <Box flex="1" maxW={{ base: "100%", md: "50%" }}>
-        <VStack spacing={4} alignItems="flex-start"> {/* VStack to vertically stack the profile+heading and the links */}
-          <HStack spacing={4} alignItems="center"> {/* HStack to horizontally stack the profile picture and the headings */}
+        <VStack spacing={4} alignItems="flex-start">
+          <HStack spacing={4} alignItems="center">
             <Box maxW="200px" maxH="200px">
               <ProfilePicture />
             </Box>
-            <VStack spacing={4} alignItems="flex-start"> {/* VStack to vertically stack the two headings */}
+            <VStack spacing={4} alignItems="flex-start">
               <Heading as="h1" size="2xl">
                 Iain Hoolahan
               </Heading>
               <Heading as="h2" size="xl">
-                Full Stack Software Developer
+                Software Developer
               </Heading>
             </VStack>
           </HStack>
 
           {/* Links section */}
-          <HStack spacing={4}>
+          <HStack spacing={4} flexWrap="wrap">
             <Link href="https://github.com/your_github_username" isExternal>
               <Button colorScheme="teal" leftIcon={<FaGithub />} size="sm">
                 GitHub
@@ -75,10 +75,10 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
       {/* Bio section */}
       <Box flex="1" maxW={{ base: "100%", md: "50%" }} mt={{ base: '4', md: '0' }}>
         <Text mb={6}>
-          I am a full stack software developer with a background in civil engineering and a passion for problem solving, learning, building, and collaboration. I have recently enjoyed channelling this energy towards creating software solutions while completing the Makers Academy 4-month immersive coding bootcamp.
+          I am a software developer with a background in civil engineering and a passion for problem solving, learning, building, and collaboration. I have recently enjoyed channelling this energy towards creating software solutions while completing the Makers Academy 4-month immersive coding bootcamp.
         </Text>
         <Text mb={6}>
-          I started my career as a civil engineer for one of the UK's largest main contractors and experienced working on two of the biggest and most technically challenging projects in the country. Following on from this, I co-founded a business providing project management services to private clients in the domestic construction sector. I am motivated by finding innovative solutions to problems and working with inspiring people which has drawn me towards the tech industry and coding.
+          I started my career as a civil engineer for one of the UK's leading main contractors and experienced working on two major infrastructure projects (Crossrail and Hinkley Point C). Following on from this, I co-founded a business providing project management services to private clients in the domestic construction sector. I am motivated by finding innovative solutions to problems and collaborating with inspiring people which has drawn me towards the tech industry and coding.
         </Text>
       </Box>
     </Flex>

@@ -28,7 +28,7 @@ const experienceData: Experience[] = [
     ],
   },
   {
-    jobTitle: "Director / Project Manager",
+    jobTitle: "Project Manager",
     company: "Harbour Contractors Ltd",
     logo: harbourContractors,
     duration: "Sept 2020 - Aug 2022",
@@ -37,7 +37,7 @@ const experienceData: Experience[] = [
       "Co-founded and managed a successful construction management firm that specialised in domestic projects, overseeing a £1.9M new-build project and an £800K extension for private clients.",
       "Demonstrated expert project management and organisational skills to take ownership of the entire process from start to finish",
       "Managed multiple stakeholders, including sub-contractors, and provided regular updates to clients on progress and budget to ensure successful completion of each project",
-      "Transitioned from a large UK contractor to self-employment with ease, showcasing self-motivation, adaptability, and a strong sense of accountability."
+      "Transitioned from a large UK contractor to self-employment, showcasing self-motivation, adaptability, and a strong sense of accountability."
     ],
   },
   {
