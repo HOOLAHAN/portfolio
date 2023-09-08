@@ -51,19 +51,19 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
             ))}
           </Wrap>
           <Box mt={4}>
-            <Text fontWeight="bold">Links:</Text>
-            <Button mr={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
+            <Text fontWeight="bold" mb={2}>Links:</Text>
+            <Button mr={2} mb={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
               Web Page
             </Button>
-            <Button mr={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
+            <Button mr={2} mb={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
               Github Repo - Client
             </Button>
-            <Button mr={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
+            <Button mr={2} mb={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
               Github Repo - Server
             </Button>
           </Box>
           <Box mt={4}>
-            <Text fontWeight="bold">Website Preview:</Text>
+            <Text fontWeight="bold" mb={2}>Website Preview:</Text>
             <iframe
               src={project.url}
               title={project.title}
@@ -73,7 +73,7 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
             />
           </Box>
           <Box mt={4}>
-          <Text fontWeight="bold">Features:</Text>
+            <Text fontWeight="bold" mb={2}>Features:</Text>
             <Accordion allowToggle>
               {project.features.map((feature, index) => (
                 <AccordionItem key={index}>
