@@ -15,17 +15,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       width="300px"
       maxWidth="100%"
       borderRadius="md"
-      position="relative" 
-      onClick={onClick} 
+      position="relative"
+      onClick={onClick}
       cursor="pointer"
-      _hover={{ 
-        boxShadow: 'lg', 
+      display="flex"
+      flexDirection="column"
+      justifyContent="top"
+      alignItems="center"
+      _hover={{
+        boxShadow: 'lg',
         "> div": {
           opacity: '1'
         }
       }}
     >
-      <Image 
+      <Image
         src={project.logo}
         alt={project.altTextLogo}
         height="100px"
@@ -33,14 +37,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         bgColor="white"
         p={1}
         borderRadius="md"
-        />
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      />
       <Text>{project.title} - {project.description}</Text>
-      <Box 
-        position="absolute" 
-        top="10px" 
-        right="10px" 
+      <Box
+        position="absolute"
+        top="10px"
+        right="10px"
         opacity="0"
-        >
+      >
         <ViewIcon boxSize={6} />
       </Box>
     </Box>
