@@ -47,7 +47,7 @@ const App: React.FC = () => {
           ))}
         </Box>
         {showModal && selectedProject && <Modal project={selectedProject} onClose={handleCloseModal} />}
-        <Heading ref={experienceRef} size="lg" my="4">Work Experience</Heading>
+        <Heading ref={experienceRef} size="lg" my="4">Employment History</Heading>
         <ExperienceCard />
         <Heading ref={educationRef} size="lg" my="4">Education</Heading>
         <EducationCard />
