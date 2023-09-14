@@ -3,6 +3,7 @@ import tipsyTouristLogo from './logos/tipsy_tourist.svg';
 import stratoStructLogo from './logos/stratostruct.svg';
 import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
+import yahtzeeLogo from './logos/yahtzee_logo.png'
 
 export interface Project {
   title: string;
@@ -17,6 +18,26 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  {
+    "title": "Yahtzee!",
+    "logo": yahtzeeLogo,
+    "altTextLogo": "Yahtzee!",
+    "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features.",
+    "url": "http://yahtzeehub.s3-website.eu-west-2.amazonaws.com/",
+    "client_repo": "https://github.com/HOOLAHAN/yahtzee",
+    "server_repo": "N/A",
+    "technologies": [
+      "React", "TypeScript", "Tailwind CSS", "AWS S3"
+    ],
+    "features": [
+      ["Interactive Dice Rolling", "Users can roll the dice with a click and decide which dice to hold for the next roll."],
+      ["Dynamic Scoring", "Automatic calculation and display of potential scores in various categories based on the current dice roll."],
+      ["User-Friendly Interface", "Clean and intuitive UI featuring score history, current dice state, and actionable buttons."],
+      ["Score Locking", "Allows users to lock in their score for a category after each round."],
+      ["Game Reset", "Option to reset the game to its initial state, clearing all scores and history."],
+      ["Cross-Platform Compatibility", "Designed to function seamlessly on both mobile devices and desktops."]
+    ]
+  },
   {
     title: "Tipsy Tourist",
     logo: tipsyTouristLogo,

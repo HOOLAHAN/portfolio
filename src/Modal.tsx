@@ -52,15 +52,21 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
           </Wrap>
           <Box mt={4}>
             <Text fontWeight="bold" mb={2}>Links:</Text>
-            <Button mr={2} mb={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
-              Web Page
-            </Button>
-            <Button mr={2} mb={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
-              Github Repo - Client
-            </Button>
-            <Button mr={2} mb={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
-              Github Repo - Server
-            </Button>
+            {project.url !== "N/A" && (
+              <Button mr={2} mb={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
+                Web Page
+              </Button>
+            )}
+            {project.client_repo !== "N/A" && (
+              <Button mr={2} mb={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
+                Github Repo - Client
+              </Button>
+            )}
+            {project.server_repo !== "N/A" && (
+              <Button mr={2} mb={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
+                Github Repo - Server
+              </Button>
+            )}
           </Box>
           <Box mt={4}>
             <Text fontWeight="bold" mb={2}>Website Preview:</Text>
