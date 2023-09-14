@@ -22,7 +22,7 @@ const projects: Project[] = [
     "title": "Yahtzee!",
     "logo": yahtzeeLogo,
     "altTextLogo": "Yahtzee!",
-    "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features.",
+    "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features",
     "url": "http://yahtzeehub.s3-website.eu-west-2.amazonaws.com/",
     "client_repo": "https://github.com/HOOLAHAN/yahtzee",
     "server_repo": "N/A",
