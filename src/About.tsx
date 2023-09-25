@@ -14,13 +14,14 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, educationRef }) => {
   return (
     <Flex
-      direction={{ base: 'column', md: 'row' }}
+      direction={{ base: 'column', lg: 'row' }}
       alignItems="flex-start"
       justifyContent="space-between"
       mx="auto"
-      overflowX={{ base: "auto", md: "visible" }}
+      overflowX={{ base: "auto", lg: "visible" }}
+      flexWrap="wrap"
     >
-      <Box flex="1" maxW={{ base: "100%", md: "50%" }}>
+      <Box flex="1" maxW={{ base: "100%", lg: "50%" }}>
         <VStack spacing={4} alignItems="flex-start">
           <HStack spacing={4} alignItems="center">
             <Box maxW="200px" maxH="200px">
@@ -73,13 +74,10 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
       </Box>
 
       {/* Bio section */}
-      <Box flex="1" maxW={{ base: "100%", md: "50%" }} mt={{ base: '4', md: '0' }}>
-        <Text mb={6}>
-          I am a software developer with a background in civil engineering and a passion for problem solving, learning, building, and collaboration. I have recently enjoyed channelling this energy towards creating software solutions while completing the Makers Academy 4-month immersive coding bootcamp.
-        </Text>
-        <Text mb={6}>
-          I started my career as a civil engineer for one of the UK's leading main contractors and experienced working on two major infrastructure projects (Crossrail and Hinkley Point C). Following on from this, I co-founded a business providing project management services to private clients in the domestic construction sector. I am motivated by finding innovative solutions to problems and collaborating with inspiring people which has drawn me towards the tech industry and coding.
-        </Text>
+      <Box flex="1" maxW={{ base: "100%", lg: "50%" }} mt={{ base: '4', md: '0' }}>
+        <Text mb={6}>I am a software engineer with a background in civil engineering and a passion for problem solving, continuous learning and collaborative innovation.</Text>
+        <Text mb={6}>I started my career as a civil engineer for one of the UK's leading main contractors and experienced working on two major infrastructure projects (Crossrail and Hinkley Point C). Following on from this I co-founded a business providing project management services to private clients in the domestic construction sector, successfully delivering two new build projects in two years. I am motivated by finding innovative solutions to problems and collaborating with inspiring people which has drawn me towards the tech industry and coding.</Text>
+        <Text mb={6}>After completing the Makers Academy 4-month immersive coding bootcamp, where I learnt the value of agile, test-driven development with object-oriented design, I am now looking to expand my software engineering experience.</Text>
       </Box>
     </Flex>
   );

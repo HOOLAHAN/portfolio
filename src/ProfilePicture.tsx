@@ -5,7 +5,13 @@ import headshot from './logos/Headshot.png';
 
 const ProfilePicture: React.FC = () => {
     return (
-      <Box>
+      <Box
+      w={{ base: '100px', md: '200px' }}
+      h={{ base: '100px', md: '200px' }}
+      borderRadius="full"
+      overflow="hidden"
+      boxShadow="md"
+      >
         <Image
             src={headshot}
             alt="Profile Picture"
