@@ -32,7 +32,7 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
                 Iain Hoolahan
               </Heading>
               <Heading as="h2" size="xl">
-                Software Developer
+                Software Engineer
               </Heading>
             </VStack>
           </HStack>
