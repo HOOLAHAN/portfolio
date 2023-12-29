@@ -20,7 +20,7 @@ const educationData: Education[] = [
       ["Collaboration Tools", "Utilised tools such as Jira, Miro, Trello and Slack for remote and in-person collaboration."],
       ["Object Oriented Programming", "Learned to design multi-class systems following OOP principles like encapsulation, inheritance, and polymorphism."],
       ["Version Control/Git", "Practiced frequent commits with meaningful messages to maintain code history. Demonstrated proficiency in Git operations such as branching, merging, rebasing, pull requests, and code reviews."],
-      ["Clean Code", "Adhered to SOLID principles to write clean, maintainable code. Employed refactoring, clear naming conventions, and inline comments to enhance code readability."],
+      ["Clean Code", "Focused on writing clean, maintainable code. Techniques employed include refactoring, implementing clear naming conventions, and using inline comments to enhance code readability and understandability."],
       ["DevOps", "Deployed projects on AWS services including S3, EC2, and Lambda. Set up CI/CD pipelines using GitHub Actions for streamlined development and deployment."]
     ],
   },

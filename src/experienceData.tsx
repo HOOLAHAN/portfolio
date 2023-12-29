@@ -20,8 +20,7 @@ const experienceData: Experience[] = [
     duration: "Apr 2023 - Present",
     website: "",
     responsibilities: [
-      "Working on Gatwick Airport train station for roofing/cladding specialist sub-contractor.",
-      "Collaborated with client to understand project requirements and objectives, ensuring effective communication.",
+      "Collaborated with clients on multiple projects across London area to understand project requirements and objectives, ensuring effective communication.",
       "Conducted site surveys, utilising advanced surveying equipment/software.",
       "Prepared accurate and detailed survey reports, delivering comprehensive documentation to clients for informed decision-making",
       "Applied engineering principles and best practices to resolve technical challenges encountered on- site, optimising project efficiency."
