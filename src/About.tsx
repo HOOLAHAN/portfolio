@@ -39,12 +39,12 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
 
           {/* Links section */}
           <HStack spacing={4} flexWrap="wrap">
-            <Link href="https://github.com/your_github_username" isExternal>
+            <Link href="https://github.com/HOOLAHAN" isExternal>
               <Button colorScheme="teal" leftIcon={<FaGithub />} size="sm">
                 GitHub
               </Button>
             </Link>
-            <Link href="https://www.linkedin.com/in/your_linkedin_username/" isExternal>
+            <Link href="https://www.linkedin.com/in/iain-hoolahan-a51a41b8/" isExternal>
               <Button colorScheme="blue" leftIcon={<FaLinkedin />} size="sm">
                 LinkedIn
               </Button>
