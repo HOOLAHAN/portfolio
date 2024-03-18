@@ -27,7 +27,7 @@ const projects: Project[] = [
     "client_repo": "https://github.com/HOOLAHAN/yahtzee",
     "server_repo": "N/A",
     "technologies": [
-      "React", "TypeScript", "Tailwind CSS", "AWS S3"
+      "React", "TypeScript", "Tailwind CSS", "AWS S3", "AWS Amplify", "AWS Cognito", "DynamoDB"
     ],
     "features": [
       ["Interactive Dice Rolling", "Users can roll the dice with a click and decide which dice to hold for the next roll."],
@@ -35,7 +35,9 @@ const projects: Project[] = [
       ["User-Friendly Interface", "Clean and intuitive UI featuring score history, current dice state, and actionable buttons."],
       ["Score Locking", "Allows users to lock in their score for a category after each round."],
       ["Game Reset", "Option to reset the game to its initial state, clearing all scores and history."],
-      ["Cross-Platform Compatibility", "Designed to function seamlessly on both mobile devices and desktops."]
+      ["Cross-Platform Compatibility", "Designed to function seamlessly on both mobile devices and desktops."],
+      ["User Authentication", "Secure login and registration functionality using AWS Cognito to provide a personalised gaming experience."],
+      ["Score Storage", "A leaderboard implemented with DynamoDB to showcase top scores, encouraging competition among players."]
     ]
   },
   {
@@ -113,7 +115,7 @@ const projects: Project[] = [
     client_repo: "https://github.com/HOOLAHAN/harbour_contractors_client",
     server_repo: "https://github.com/HOOLAHAN/harbour-contractors-lambda",
     technologies: [
-      "React", "Node", "Chakra UI", "Twilio API", "AWS S3", "AWS Lambda"
+      "React", "Node", "Chakra UI", "AWS S3", "AWS Lambda"
     ],
     features: [
       ["Homepage", "A welcoming homepage to introduce visitors to Harbour Contractors Ltd."],
@@ -121,7 +123,6 @@ const projects: Project[] = [
       ["About Us Page", "An 'About Us' page offering details about the company’s history, mission, and team."],
       ["Services Page", "A 'Services' page describing the different services offered by the company."],
       ["Projects Carousel", "Features a 'Projects' page with a carousel displaying images of past projects."],
-      ["Contact Us Form", "A 'Contact Us' page with a form allowing users to send messages directly to the company."],
       ["Chakra UI Styling", "Utilises Chakra UI for a modern and responsive design."]
     ]
   },
