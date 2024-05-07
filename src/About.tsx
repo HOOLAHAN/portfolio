@@ -63,7 +63,7 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
               - Projects
             </Button>
             <Button onClick={() => scrollToRef(experienceRef)} variant="ghost" _hover={{ boxShadow: 'md' }}>
-              - Work Experience
+              - Employment History
             </Button>
             <Button onClick={() => scrollToRef(educationRef)} variant="ghost" _hover={{ boxShadow: 'md' }}>
               - Education
@@ -75,9 +75,9 @@ const About: React.FC<AboutProps> = ({ scrollToRef, projectsRef, experienceRef, 
 
       {/* Bio section */}
       <Box flex="1" minW={{ lg: "50%" }}>
-        <Text mb={6}>I am a software engineer with a background in civil engineering and a passion for problem solving, continuous learning and collaborative innovation.</Text>
-        <Text mb={6}>I started my career as a civil engineer for one of the UK's leading main contractors and experienced working on two major infrastructure projects (Crossrail and Hinkley Point C). Following on from this I co-founded a business providing project management services to private clients in the domestic construction sector, successfully delivering two new build projects in two years. I am motivated by finding innovative solutions to problems and collaborating with inspiring people which has drawn me towards the tech industry and coding.</Text>
-        <Text mb={6}>After completing the Makers Academy 4-month immersive coding bootcamp, where I learnt the value of agile, test-driven development with object-oriented design, I am now looking to expand my software engineering experience.</Text>
+        <Text mb={6}>Hi, I'm Iain! A software engineer with a foudnation in civil engineering with a robust track record of problem-solving, continuous learning, and collaborative innovation. Having transitioned from civil engineering to software development, my rigorous training at Makers Academy's 16-week coding bootcamp has greatly enhanced my technical skills, especially in Full Stack Development using technologies like React, Node.js, and AWS.</Text>
+        <Text mb={6}>My career began in civil engineering, where I managed key aspects of major projects like the Hinkley Point C nuclear power station and Crossrail at Liverpool Street Station. Now in tech, I apply the same dedication to quality and innovation, developing applications like 'StratoStruct', a full-stack MERN app for construction product sourcing, and 'Tipsy Tourist', which integrates Google APIs for dynamic travel itineraries.</Text>
+        <Text mb={6}>I am particularly enthusiastic about joining a forward-thinking team, where I can contribute to creating cutting-edge software solutions and continue to grow both personally and professionally.</Text>
       </Box>
     </Flex>
   );
