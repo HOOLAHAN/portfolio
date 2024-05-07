@@ -4,6 +4,7 @@ import stratoStructLogo from './logos/stratostruct.svg';
 import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
 import yahtzeeLogo from './logos/yahtzee_logo.png'
+import pfgeomatics from './logos/pfgeomatics.webp'
 
 export interface Project {
   title: string;
@@ -21,7 +22,7 @@ const projects: Project[] = [
   {
     "title": "Yahtzee!",
     "logo": yahtzeeLogo,
-    "altTextLogo": "Yahtzee!",
+    "altTextLogo": "Logo of Yahtzee!",
     "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features",
     "url": "http://yahtzeehub.s3-website.eu-west-2.amazonaws.com/",
     "client_repo": "https://github.com/HOOLAHAN/yahtzee",
@@ -43,7 +44,7 @@ const projects: Project[] = [
   {
     title: "Tipsy Tourist",
     logo: tipsyTouristLogo,
-    altTextLogo: "Tipsy Tourist",
+    altTextLogo: "Logo of Tipsy Tourist",
     description: "A web page to generate a pub crawl/tourist attractions itinerary",
     url: "http://www.tipsytourist.org/",
     client_repo: "https://github.com/HOOLAHAN/tipsy-tourist",
@@ -63,7 +64,7 @@ const projects: Project[] = [
   {
     title: "StratoStruct",
     logo: stratoStructLogo,
-    altTextLogo: "StratoStruct",
+    altTextLogo: "Logo of StratoStruct",
     description: "A web page to find local suppliers of prefabricated construction products ranked by proximity",
     url: "http://www.stratostruct.com",
     client_repo: "https://github.com/HOOLAHAN/stratostruct_client",
@@ -86,7 +87,7 @@ const projects: Project[] = [
   {
     title: "Find A Film",
     logo: findAFilmLogo,
-    altTextLogo: "Find A Film",
+    altTextLogo: "Logo of Find A Film",
     description: "A web page to search for films to watch",
     url: "http://findafilm.s3-website.eu-west-2.amazonaws.com/",
     client_repo: "https://github.com/HOOLAHAN/Find_A_Film",
@@ -109,7 +110,7 @@ const projects: Project[] = [
   {
     title: "Harbour Contractors Ltd",
     logo: harbourContractors,
-    altTextLogo: "Harbour Contractors Ltd",
+    altTextLogo: "Logo of Harbour Contractors Ltd",
     description: "A company website showcasing projects and services",
     url: "http://www.harbourcontractors.co.uk/",
     client_repo: "https://github.com/HOOLAHAN/harbour_contractors_client",
@@ -126,6 +127,30 @@ const projects: Project[] = [
       ["Chakra UI Styling", "Utilises Chakra UI for a modern and responsive design."]
     ]
   },
+  {
+    "title": "PF Geomatics Ltd",
+    "logo": pfgeomatics,
+    "altTextLogo": "Logo of PF Geomatics Ltd",
+    "description": "Official company website for PF Geomatics Ltd.",
+    "url": "http://www.pfgeomatics.com/",
+    "client_repo": "https://github.com/HOOLAHAN/pfgeomatics",
+    "server_repo": "Not Applicable",
+    "technologies": [
+      "React", 
+      "TypeScript", 
+      "Node", 
+      "Chakra UI", 
+      "AWS S3"
+    ],
+    "features": [
+      ["Cover Video", "Homepage video loop showcasing the PF Geomatics team at work, highlighting our field activities and technological expertise."],
+      ["About Component", "Modal dialog with detailed information about PF Geomatics' mission, team, and ethos."],
+      ["Services Component", "Interactive modal listing the various services PF Geomatics offers, with descriptions to help visitors understand our capabilities."],
+      ["Projects Carousel", "Image carousel featuring past projects to demonstrate our track record of success and expertise."],
+      ["Chakra UI Styling", "Website utilises Chakra UI for a sleek, modern, and responsive design."],
+      ["Colour Mode Switcher", "Feature allowing users to toggle between light and dark modes, enhancing usability and visual experience."]
+    ]
+  }
 ];
 
 export default projects;
