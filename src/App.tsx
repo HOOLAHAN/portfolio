@@ -33,7 +33,7 @@ const App: React.FC = () => {
 
   return (
     <ChakraProvider theme={theme}>
-       <Box p="6">
+       <Box p="6" maxWidth={1600} mx="auto">
         <About
             scrollToRef={scrollToRef}
             projectsRef={projectsRef}

@@ -134,7 +134,7 @@ const projects: Project[] = [
     "description": "Official company website for PF Geomatics Ltd.",
     "url": "http://www.pfgeomatics.com/",
     "client_repo": "https://github.com/HOOLAHAN/pfgeomatics",
-    "server_repo": "Not Applicable",
+    "server_repo": "N/A",
     "technologies": [
       "React", 
       "TypeScript", 
