@@ -1,7 +1,11 @@
 // educationData.ts
 
+import cardiff from './logos/cardiff.png'
+import makers from './logos/Makers.png'
+
 type Education = {
   institute: string;
+  logo: string;
   course: string;
   duration: string;
   content: [string, string][];
@@ -10,6 +14,7 @@ type Education = {
 const educationData: Education[] = [
   {
     institute: "Makers Academy",
+    logo: makers,
     course: "Full Stack Software Development Bootcamp",
     duration: "Sept 2022 - Jan 2023",
     content: [
@@ -26,6 +31,7 @@ const educationData: Education[] = [
   },
   {
     institute: "Cardiff University",
+    logo: cardiff,
     course: "MEng Civil Engineering",
     duration: "Sept 2011 - Jun 2015",
     content: []

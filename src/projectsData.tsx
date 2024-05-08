@@ -4,7 +4,7 @@ import stratoStructLogo from './logos/stratostruct.svg';
 import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
 import yahtzeeLogo from './logos/yahtzee_logo.png'
-import pfgeomatics from './logos/pfgeomatics.webp'
+import pfgeomatics from './logos/pfglogo.jpg'
 
 export interface Project {
   title: string;
