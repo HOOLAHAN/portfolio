@@ -34,7 +34,10 @@ const educationData: Education[] = [
     logo: cardiff,
     course: "MEng Civil Engineering",
     duration: "Sept 2011 - Jun 2015",
-    content: []
+    content: [
+      ["Achieved", "Second Class Honours Division One (2:1) Grade."],
+      ["Modules included", "Engineering Analysis, Structural Mechanics, Computing, Civil Engineering Design, Continuum Solid Mechanics, Business Management, Hydraulics."]
+      ]
   }
 ];
 
