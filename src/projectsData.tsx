@@ -50,7 +50,7 @@ const projects: Project[] = [
     client_repo: "https://github.com/HOOLAHAN/tipsy-tourist",
     server_repo: "https://github.com/HOOLAHAN/tipsy-tourst-lambda",
     technologies: [
-      "JavaScript", "Node", "Express", "React", "Chakra UI", "Google API", "AWS S3", "AWS Lambda"
+      "JavaScript", "Node", "Express", "React", "Chakra UI", "Google API", "AWS S3", "Serverless Framework", "AWS Lambda"
     ],
     features: [
       ["User-Friendly Interface", "Single-page design featuring a map, customisable search form, itinerary, and location details."],
@@ -139,14 +139,18 @@ const projects: Project[] = [
       "React", 
       "TypeScript", 
       "Node", 
-      "Chakra UI", 
-      "AWS S3"
+      "Chakra UI",
+      "Serverless Framework", 
+      "AWS S3",
+      "AWS Lambda",
+      "SendGrid API"
     ],
     "features": [
       ["Cover Video", "Homepage video loop showcasing the PF Geomatics team at work, highlighting our field activities and technological expertise."],
       ["About Component", "Modal dialog with detailed information about PF Geomatics' mission, team, and ethos."],
       ["Services Component", "Interactive modal listing the various services PF Geomatics offers, with descriptions to help visitors understand our capabilities."],
       ["Projects Carousel", "Image carousel featuring past projects to demonstrate our track record of success and expertise."],
+      ["Contact Us Form", "A form for inquiries, with data submitted to a serverless backend via AWS Lambda and emailed to our inbox using the SendGrid API.."],
       ["Chakra UI Styling", "Website utilises Chakra UI for a sleek, modern, and responsive design."],
       ["Colour Mode Switcher", "Feature allowing users to toggle between light and dark modes, enhancing usability and visual experience."]
     ]
