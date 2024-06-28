@@ -24,7 +24,7 @@ const projects: Project[] = [
     "logo": yahtzeeLogo,
     "altTextLogo": "Logo of Yahtzee!",
     "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features",
-    "url": "http://yahtzeehub.s3-website.eu-west-2.amazonaws.com/",
+    "url": "https://d2q1p79jvmctkj.cloudfront.net/",
     "client_repo": "https://github.com/HOOLAHAN/yahtzee",
     "server_repo": "N/A",
     "technologies": [
@@ -89,7 +89,7 @@ const projects: Project[] = [
     logo: findAFilmLogo,
     altTextLogo: "Logo of Find A Film",
     description: "A web page to search for films to watch",
-    url: "http://findafilm.s3-website.eu-west-2.amazonaws.com/",
+    url: "https://d15ghb6p19akrh.cloudfront.net/",
     client_repo: "https://github.com/HOOLAHAN/Find_A_Film",
     server_repo: "N/A",
     technologies: [
