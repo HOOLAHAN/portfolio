@@ -46,7 +46,7 @@ const projects: Project[] = [
     logo: tipsyTouristLogo,
     altTextLogo: "Logo of Tipsy Tourist",
     description: "A web page to generate a pub crawl/tourist attractions itinerary",
-    url: "http://www.tipsytourist.org/",
+    url: "https://www.tipsytourist.org/",
     client_repo: "https://github.com/HOOLAHAN/tipsy-tourist",
     server_repo: "https://github.com/HOOLAHAN/tipsy-tourst-lambda",
     technologies: [
@@ -66,7 +66,7 @@ const projects: Project[] = [
     logo: stratoStructLogo,
     altTextLogo: "Logo of StratoStruct",
     description: "A web page to find local suppliers of prefabricated construction products ranked by proximity",
-    url: "http://www.stratostruct.com",
+    url: "https://www.stratostruct.com",
     client_repo: "https://github.com/HOOLAHAN/stratostruct_client",
     server_repo: "https://github.com/HOOLAHAN/stratostruct_server",
     technologies: [
@@ -112,7 +112,7 @@ const projects: Project[] = [
     logo: harbourContractors,
     altTextLogo: "Logo of Harbour Contractors Ltd",
     description: "A company website showcasing projects and services",
-    url: "http://www.harbourcontractors.co.uk/",
+    url: "https://www.harbourcontractors.co.uk/",
     client_repo: "https://github.com/HOOLAHAN/harbour_contractors_client",
     server_repo: "https://github.com/HOOLAHAN/harbour-contractors-lambda",
     technologies: [
@@ -132,7 +132,7 @@ const projects: Project[] = [
     "logo": pfgeomatics,
     "altTextLogo": "Logo of PF Geomatics Ltd",
     "description": "Official company website for PF Geomatics Ltd.",
-    "url": "http://www.pfgeomatics.com/",
+    "url": "https://www.pfgeomatics.com/",
     "client_repo": "https://github.com/HOOLAHAN/pfgeomatics",
     "server_repo": "N/A",
     "technologies": [
