@@ -8,8 +8,6 @@ This project is a portfolio website developed using React and Chakra UI. It show
 ## Features
 About: Brief introduction and navigation links.
 Projects: Displays a grid of project cards, with detailed information available in modal windows.
-Work Experience: Lists job experience with details about responsibilities and timelines.
-Education: Provides an educational background with relevant courses and degrees.
 
 ## Technologies Used
 - React
