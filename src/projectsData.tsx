@@ -66,7 +66,7 @@ const projects: Project[] = [
     logo: stratoStructLogo,
     altTextLogo: "Logo of StratoStruct",
     description: "A web page to find local suppliers of prefabricated construction products ranked by proximity",
-    url: "https://www.stratostruct.com",
+    url: "d1ie9ubho8a451.cloudfront.net",
     client_repo: "https://github.com/HOOLAHAN/stratostruct_client",
     server_repo: "https://github.com/HOOLAHAN/stratostruct_server",
     technologies: [
