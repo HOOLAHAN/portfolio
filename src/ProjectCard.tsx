@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         justifyContent="center"
         alignItems="center"
       />
-      <Text>{project.title} - {project.description}</Text>
+      <Text textAlign="center" fontSize="sm" mt={2}>{project.title} - {project.description}</Text>
       <Box
         position="absolute"
         top="10px"
