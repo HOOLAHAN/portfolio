@@ -40,13 +40,13 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
       <Image
         src={require(`./projects/${project.image}`)}
         alt={project.projectName}
-        height="100px"
+        height="200px"
         objectFit="contain"
         bgColor="white"
         p={1}
         borderRadius="md"
       />
-      <Text>{project.projectName} - {project.location}</Text>
+      <Text textAlign="center" fontSize="sm" mt={2}>{project.projectName} - {project.location}</Text>
       <Box
         position="absolute"
         top="10px"
