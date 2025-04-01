@@ -66,7 +66,7 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
             <Text><strong>Location:</strong> {project.location}</Text>
             <Text><strong>Start Date:</strong> {project.startDate}</Text>
             <Text><strong>End Date:</strong> {project.endDate}</Text>
-            <Text><strong>Details:</strong> {project.details}</Text>
+            <Text>{project.details}</Text>
           </ModalBody>
         </ModalContent>
       </Modal>

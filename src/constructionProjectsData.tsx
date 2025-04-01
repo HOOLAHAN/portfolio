@@ -52,7 +52,7 @@ const constructionProjects: ConstructionProject[] = [
         startDate: "September 2020",
         endDate: "September 2022",
         location: "West Sussex, UK",
-        details: "Trippets was a new build project for a private client, which I project managed from demolition to completion through specialised subcontract packages. Key highlights of the project included piled foundations, a green oak frame, timber framing with high-quality insulation to achieve an EPC A+ rating, underfloor heating, a swimming pool, garage, pool house, landscaped gardens, solar panels, and a ground source heat pump utilizing a network of 9 boreholes. The property also featured premium finishes, cedar cladding, a slate roof, and limestone walls."
+        details: "Trippets was a new build project for a private client, which I project managed from demolition to completion through specialised subcontract packages. Key highlights of the project included piled foundations, a green oak frame, timber framing with high-quality insulation to achieve an EPC A+ rating, underfloor heating, a swimming pool, garage, pool house, landscaped gardens, solar panels, and a ground source heat pump utilising a network of 9 boreholes. The property also featured premium finishes, cedar cladding, a slate roof, and limestone walls."
       },
       {
         projectName: "Java Sound",
