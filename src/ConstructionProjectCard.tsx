@@ -58,7 +58,7 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
 
       <Modal isOpen={isOpen} onClose={onClose} size="lg">
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent mx={4}>
           <ModalHeader>{project.projectName}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
