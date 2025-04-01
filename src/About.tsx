@@ -37,12 +37,8 @@ const About: React.FC = () => {
                   <Heading as="h1" size={{ base: 'xl', md: '2xl' }}>
                     Iain Hoolahan
                   </Heading>
-                  <Heading as="h2" size={{ base: 'lg', md: 'xl' }}>
-                    Software Engineer
-                  </Heading>
                 </VStack>
               </HStack>
-
               <HStack spacing={4} flexWrap="wrap">
                 <Link href="https://github.com/HOOLAHAN" isExternal>
                   <Button colorScheme="teal" leftIcon={<FaGithub />} size="sm">
