@@ -28,7 +28,7 @@ const App: React.FC = () => {
     <ChakraProvider theme={theme}>
       <Box p="6" maxWidth={1600} mx="auto">
         <About />
-        <Center><Heading ref={projectsRef} my={4} size="lg">Projects</Heading></Center>
+        <Center><Heading ref={projectsRef} my={4} size="lg">Software Projects</Heading></Center>
         <Box display="flex" flexWrap="wrap" gridGap="4" justifyContent="center">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} onClick={() => handleProjectClick(project)} />
