@@ -17,12 +17,12 @@ const constructionProjects: ConstructionProject[] = [
     website: "https://www.pfgeomatics.com/",
     projects: [
       {
-        projectName: "Gatwick Station Project",
-        image: "gatwick_station.png",
-        startDate: "April 2023",
-        endDate: "November 2023",
-        location: "Gatwick, London",
-        details: "I led essential site engineering and surveying tasks for Lindner Prater Ltd, focusing on the precise installation of roofing, internal/external cladding, and escalator glazing. My role required a high level of accuracy, where I conducted comprehensive surveys to identify potential tolerance issues and interface challenges, ensuring high-quality construction standards."
+        projectName: "105 Victoria Street",
+        image: "victoria_street.png",
+        startDate: "June 2024",
+        endDate: "April 2025",
+        location: "Westminster, London",
+        details: "At 105 Victoria Street, I collaborated with Severfield, a leading steel specialist, to facilitate steel erection and the installation of precast planks. My responsibilities included surveying embedments cast into the core, creating fin plate setting out drawings, and verifying steel alignments. I effectively communicated tirfor/pack requirements, set out precast planks, and delivered as-built survey reports for handover, ensuring precision and quality."
       },
       {
         projectName: "53 Clarendon Road",
@@ -33,12 +33,12 @@ const constructionProjects: ConstructionProject[] = [
         details: "I played a key role in Regal's The Clarendon project, a high-rise residential development in Watford. Collaborating closely with the Regal team, I oversaw the concrete subcontractor's work, ensuring quality standards through meticulous quality checks, rebar inspections, and both pre-pour and post-pour surveys. I also conducted setting out verifications to maintain the stringent tolerances needed for cladding, contributing to the project's success in Watford's regeneration."
       },
       {
-        projectName: "105 Victoria Street",
-        image: "victoria_street.png",
-        startDate: "June 2024",
-        endDate: "April 2025",
-        location: "Westminster, London",
-        details: "At 105 Victoria Street, I collaborated with Severfield, a leading steel specialist, to facilitate steel erection and the installation of precast planks. My responsibilities included surveying embedments cast into the core, creating fin plate setting out drawings, and verifying steel alignments. I effectively communicated tirfor/pack requirements, set out precast planks, and delivered as-built survey reports for handover, ensuring precision and quality."
+        projectName: "Gatwick Station Project",
+        image: "gatwick_station.png",
+        startDate: "April 2023",
+        endDate: "November 2023",
+        location: "Gatwick, London",
+        details: "I led essential site engineering and surveying tasks for Lindner Prater Ltd, focusing on the precise installation of roofing, internal/external cladding, and escalator glazing. My role required a high level of accuracy, where I conducted comprehensive surveys to identify potential tolerance issues and interface challenges, ensuring high-quality construction standards."
       }
     ]
   },
