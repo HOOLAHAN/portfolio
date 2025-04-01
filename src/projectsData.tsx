@@ -4,7 +4,7 @@ import stratoStructLogo from './logos/stratostruct.svg';
 import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
 import yahtzeeLogo from './logos/yahtzee_logo.png'
-import pfgeomatics from './logos/pfglogo.jpg'
+import pfgeomatics from './logos/pfglogo.png'
 
 export interface Project {
   title: string;
@@ -23,7 +23,7 @@ const projects: Project[] = [
     "title": "Yahtzee!",
     "logo": yahtzeeLogo,
     "altTextLogo": "Logo of Yahtzee!",
-    "description": "A web-based Yahtzee game allowing single players to enjoy the classic dice game with modern UI features",
+    "description": "A web-based Yahtzee game allowing single and two players to enjoy the classic dice game with modern UI features and a score leaderboard",
     "url": "https://d2q1p79jvmctkj.cloudfront.net/",
     "client_repo": "https://github.com/HOOLAHAN/yahtzee",
     "server_repo": "N/A",
@@ -45,8 +45,8 @@ const projects: Project[] = [
     title: "Tipsy Tourist",
     logo: tipsyTouristLogo,
     altTextLogo: "Logo of Tipsy Tourist",
-    description: "A web page to generate a pub crawl/tourist attractions itinerary",
-    url: "https://www.tipsytourist.org/",
+    description: "A web page to generate a pub crawl/tourist attractions itinerary and discover venue information",
+    url: "https://d3pbhrkalr09t8.cloudfront.net",
     client_repo: "https://github.com/HOOLAHAN/tipsy-tourist",
     server_repo: "https://github.com/HOOLAHAN/tipsy-tourst-lambda",
     technologies: [
@@ -88,7 +88,7 @@ const projects: Project[] = [
     title: "Find A Film",
     logo: findAFilmLogo,
     altTextLogo: "Logo of Find A Film",
-    description: "A web page to search for films to watch",
+    description: "A web page to search for films to watch, get recommendations, and find out more information about a movie",
     url: "https://d15ghb6p19akrh.cloudfront.net/",
     client_repo: "https://github.com/HOOLAHAN/Find_A_Film",
     server_repo: "N/A",
@@ -131,7 +131,7 @@ const projects: Project[] = [
     "title": "PF Geomatics Ltd",
     "logo": pfgeomatics,
     "altTextLogo": "Logo of PF Geomatics Ltd",
-    "description": "Official company website for PF Geomatics Ltd.",
+    "description": "Official company website for PF Geomatics Ltd",
     "url": "https://www.pfgeomatics.com/",
     "client_repo": "https://github.com/HOOLAHAN/pfgeomatics",
     "server_repo": "N/A",
