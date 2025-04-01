@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { ChakraProvider, Box, Heading, extendTheme, Center } from '@chakra-ui/react';
+import { ChakraProvider, Box, Heading, extendTheme, Center, Text } from '@chakra-ui/react';
 import projects, { Project } from './projectsData';
 import constructionProjects from './constructionProjectsData';
 import ProjectCard from './ProjectCard';
@@ -36,17 +36,20 @@ const App: React.FC = () => {
         </Box>
         
         <Center><Heading ref={projectsRef} my={4} size="lg">Construction Projects</Heading></Center>
-        <Box display="flex" flexWrap="wrap" gridGap="4" justifyContent="center">
-          {constructionProjects.map((company, companyIndex) =>
-            company.projects.map((project, projectIndex) => (
-              <ConstructionProjectCard
-                key={`${companyIndex}-${projectIndex}`}
-                project={project}
-                company={company.company}
-              />
-            ))
-          )}
-        </Box>
+        {constructionProjects.map((company, companyIndex) => (
+          <Box key={companyIndex} mb={6}>
+            <Center><Text fontSize="xl" fontWeight="bold" mt={4} mb={2}>{company.company}</Text></Center>
+            <Box display="flex" flexWrap="wrap" gridGap="4" justifyContent="center">
+              {company.projects.map((project, projectIndex) => (
+                <ConstructionProjectCard
+                  key={`${companyIndex}-${projectIndex}`}
+                  project={project}
+                  company={company.company}
+                />
+              ))}
+            </Box>
+          </Box>
+        ))}
         
         {showModal && selectedProject && <Modal project={selectedProject} onClose={handleCloseModal} />}
       </Box>
