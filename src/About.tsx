@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Flex, Box, Heading, Center, Button, VStack, Link, HStack } from '@chakra-ui/react';
-import { FaGithub, FaLinkedin, FaFilePdf, FaInfoCircle } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInfoCircle } from 'react-icons/fa';
 import ProfilePicture from './ProfilePicture';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import BioModal from './BioModal';
@@ -48,11 +48,6 @@ const About: React.FC = () => {
                 <Link href="https://www.linkedin.com/in/iain-hoolahan-a51a41b8/" isExternal>
                   <Button colorScheme="blue" leftIcon={<FaLinkedin />} size="sm">
                     LinkedIn
-                  </Button>
-                </Link>
-                <Link href="/Iain_Hoolahan_CV.pdf" isExternal target="_blank" rel="noopener noreferrer">
-                  <Button colorScheme="purple" leftIcon={<FaFilePdf />} size="sm">
-                    CV
                   </Button>
                 </Link>
                 <Button colorScheme="orange" size="sm" leftIcon={<FaInfoCircle />} onClick={openBio}>

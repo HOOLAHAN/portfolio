@@ -23,20 +23,13 @@ const BioModal: React.FC<BioModalProps> = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <Text mt={6} mb={6}>
-            Hi, I'm Iain! A software engineer with a foundation in civil engineering and a robust track record of problem-solving,
-            continuous learning, and collaborative innovation. Having transitioned from civil engineering to software development,
-            my rigorous training at Makers Academy's 16-week coding bootcamp has greatly enhanced my technical skills, especially in
-            Full Stack Development using technologies like React, Node.js, and AWS.
+          Hi, I'm Iain! I’m a versatile and results-driven professional with a diverse background spanning civil engineering, project management, and software development. My career journey has seen me transition from delivering key infrastructure projects like Hinkley Point C and Crossrail to managing high-end bespoke residential projects for private clients at Harbour Contractors. More recently, I have applied my problem-solving skills to software development, completing intensive training at Makers Academy and building full-stack applications.
           </Text>
           <Text mb={6}>
-            My career began in civil engineering, where I managed key aspects of major projects like the Hinkley Point C nuclear power
-            station and Crossrail at Liverpool Street Station. Now in tech, I apply the same dedication to quality and innovation,
-            developing applications like 'StratoStruct', a full-stack MERN app for construction product sourcing, and 'Tipsy Tourist',
-            which integrates Google APIs for dynamic travel itineraries.
+          I thrive on tackling complex challenges, whether in engineering environments or through innovative software solutions. My technical toolkit spans project management, surveying, full-stack development, and client engagement, enabling me to approach problems with a unique blend of practical and technical perspectives.
           </Text>
           <Text>
-            I am particularly enthusiastic about joining a forward-thinking team, where I can contribute to creating cutting-edge software
-            solutions and continue to grow both personally and professionally.
+          I’m passionate about joining forward-thinking teams where I can leverage my diverse skill set to drive results and continuously learn. I value collaboration and am committed to creating impactful solutions. 
           </Text>
         </ModalBody>
         <ModalFooter>
