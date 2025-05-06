@@ -5,6 +5,7 @@ import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
 import yahtzeeLogo from './logos/yahtzee_logo.png'
 import pfgeomatics from './logos/pfglogo.png'
+import ijrhservices from './logos/IJRH_SERVICES_LOGO.png'
 
 export interface Project {
   title: string;
@@ -131,7 +132,7 @@ const projects: Project[] = [
     "title": "PF Geomatics Ltd",
     "logo": pfgeomatics,
     "altTextLogo": "Logo of PF Geomatics Ltd",
-    "description": "Official company website for PF Geomatics Ltd",
+    "description": "Official company website",
     "url": "https://www.pfgeomatics.com/",
     "client_repo": "https://github.com/HOOLAHAN/pfgeomatics",
     "server_repo": "N/A",
@@ -153,6 +154,33 @@ const projects: Project[] = [
       ["Contact Us Form", "A form for inquiries, with data submitted to a serverless backend via AWS Lambda and emailed to our inbox using the SendGrid API.."],
       ["Chakra UI Styling", "Website utilises Chakra UI for a sleek, modern, and responsive design."],
       ["Colour Mode Switcher", "Feature allowing users to toggle between light and dark modes, enhancing usability and visual experience."]
+    ]
+  },
+  {
+    title: "IJRH Services Ltd",
+    logo: ijrhservices,
+    altTextLogo: "Logo of IJRH Services Ltd",
+    description: "Official company website showcasing professional services",
+    url: "https://www.ijrhservices.co.uk/",
+    client_repo: "https://github.com/HOOLAHAN/ijrhservices",
+    server_repo: "N/A",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Chakra UI",
+      "AWS S3",
+      "AWS CloudFront",
+      "GitHub Actions",
+      "Google Tag Manager",
+    ],
+    features: [
+      ["Responsive Design", "Fully mobile-optimised layout built with Chakra UI for all screen sizes."],
+      ["Service Pages", "Dedicated pages for each service with background imagery and project highlights."],
+      ["Project Portfolio", "Structured list of construction and engineering projects with descriptive text and images."],
+      ["Cloud Hosting", "Hosted on AWS S3 with global distribution via CloudFront and HTTPS support."],
+      ["CI/CD Pipeline", "Deployment pipeline via GitHub Actions triggered on main branch pushes."],
+      ["SEO & Metadata", "Configured with meaningful metadata for search visibility and social sharing."],
+      ["Analytics Integration", "Google Tag Manager and GA4 tracking installed to monitor site traffic and behavior."]
     ]
   }
 ];
