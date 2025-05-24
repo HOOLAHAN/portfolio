@@ -1,5 +1,5 @@
 // src/projectsData.ts
-import tipsyTouristLogo from './logos/tipsy_tourist.svg';
+import tipsyTouristLogo from './logos/tipsy_tourist.png';
 import stratoStructLogo from './logos/stratostruct.svg';
 import findAFilmLogo from './logos/find_a_film.svg';
 import harbourContractors from './logos/harbourcontractors.svg';
