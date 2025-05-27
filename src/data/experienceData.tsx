@@ -1,7 +1,7 @@
 // experienceData.ts
-import LORlogo from './logos/LOR.png';
-import harbourContractors from './logos/harbourcontractors.svg';
-import pfgeomatics from './logos/pfgeomatics.webp'
+import LORlogo from '../logos/LOR.png';
+import harbourContractors from '../logos/harbourcontractors.svg';
+import pfgeomatics from '../logos/pfgeomatics.webp'
 
 type Experience = {
   jobTitle: string;

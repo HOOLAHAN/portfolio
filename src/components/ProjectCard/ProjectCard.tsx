@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Image, Text } from '@chakra-ui/react';
-import { Project } from './projectsData';
+import { Project } from '../../data/projectsData';
 import { ViewIcon } from '@chakra-ui/icons';
 
 type ProjectCardProps = {

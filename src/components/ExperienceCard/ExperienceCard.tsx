@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Heading, Text, List, ListItem, ListIcon, Link, Image } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
-import experienceData from './experienceData'; 
+import experienceData from '../../data/experienceData'; 
 
 const ExperienceCard: React.FC = () => {
   return (

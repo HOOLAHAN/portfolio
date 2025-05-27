@@ -1,6 +1,6 @@
 import { Box, Heading, Text, List, ListItem, ListIcon, Image } from '@chakra-ui/react';
 import { CheckCircleIcon } from '@chakra-ui/icons';
-import educationData from './educationData';
+import educationData from '../../data/educationData';
 
 const EducationCard: React.FC = () => {
   return (

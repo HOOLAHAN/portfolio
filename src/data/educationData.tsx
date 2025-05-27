@@ -1,7 +1,7 @@
 // educationData.ts
 
-import cardiff from './logos/cardiff.png'
-import makers from './logos/Makers.png'
+import cardiff from '../logos/cardiff.png'
+import makers from '../logos/Makers.png'
 
 type Education = {
   institute: string;

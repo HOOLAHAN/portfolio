@@ -1,5 +1,5 @@
 import React from 'react';
-import { Project } from './projectsData';
+import { Project } from '../../data/projectsData';
 import {
   Box,
   Modal as ChakraModal,

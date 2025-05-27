@@ -1,7 +1,7 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ProjectCard from './ProjectCard';
-import projects from './projectsData';
+import projects from '../../data/projectsData';
 
 describe('ProjectCard', () => {
   const mockOnClick = jest.fn();

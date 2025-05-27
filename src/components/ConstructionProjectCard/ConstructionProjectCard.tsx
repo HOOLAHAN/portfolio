@@ -38,7 +38,7 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
       }}
     >
       <Image
-        src={require(`./projects/${project.image}`)}
+        src={require(`../../projects/${project.image}`)}
         alt={project.projectName}
         height="200px"
         objectFit="contain"

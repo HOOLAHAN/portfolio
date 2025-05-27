@@ -7,12 +7,12 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import projects, { Project } from './projectsData';
-import constructionProjects from './constructionProjectsData';
-import ProjectCard from './ProjectCard';
-import ConstructionProjectCard from './ConstructionProjectCard';
-import Modal from './Modal';
-import About from './About';
+import projects, { Project } from '../data/projectsData';
+import constructionProjects from '../data/constructionProjectsData';
+import ProjectCard from '../components/ProjectCard/ProjectCard';
+import ConstructionProjectCard from '../components/ConstructionProjectCard/ConstructionProjectCard';
+import Modal from '../components/Modal/Modal';
+import About from '../components/About/About';
 
 const PortfolioContent: React.FC = () => {
   const projectsRef = useRef(null);

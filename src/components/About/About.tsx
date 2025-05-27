@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Flex, Box, Heading, Center, Button, VStack, Link, HStack } from '@chakra-ui/react';
 import { FaGithub, FaLinkedin, FaInfoCircle } from 'react-icons/fa';
-import ProfilePicture from './ProfilePicture';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import BioModal from './BioModal';
+import ProfilePicture from '../ProfilePicture/ProfilePicture';
+import { ColorModeSwitcher } from '../../theme/ColorModeSwitcher';
+import BioModal from '../BioModal/BioModal';
 
 const About: React.FC = () => {
   const [isBioOpen, setIsBioOpen] = useState(false);
