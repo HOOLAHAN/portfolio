@@ -1,8 +1,8 @@
 // src/projectsData.ts
 import tipsyTouristLogo from '../logos/tipsy_tourist.png';
 import stratoStructLogo from '../logos/stratostruct.svg';
-import findAFilmLogo from '../logos/find_a_film.svg';
-import harbourContractors from '../logos/harbourcontractors.svg';
+import findAFilmLogo from '../logos/find_a_film.png';
+import harbourContractors from '../logos/harbourcontractors.png';
 import yahtzeeLogo from '../logos/yahtzee_logo.png'
 import pfgeomatics from '../logos/pfglogo.png'
 import ijrhservices from '../logos/IJRH_SERVICES_LOGO.png'

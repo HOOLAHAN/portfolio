@@ -22,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       flexDirection="column"
       justifyContent="top"
       alignItems="center"
+      bgColor="whiteAlpha.100"
       _hover={{
         boxShadow: 'lg',
         "> div": {
@@ -32,9 +33,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       <Image
         src={project.logo}
         alt={project.altTextLogo}
-        height="100px"
         objectFit="contain"
-        bgColor="white"
+        bgColor="whiteAlpha.700"
         p={1}
         borderRadius="md"
         display="flex"
