@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Image, Text } from '@chakra-ui/react';
+import { Badge, Box, HStack, Image, Text, useColorModeValue } from '@chakra-ui/react';
 import { Project } from '../../data/projectsData';
 import { ViewIcon } from '@chakra-ui/icons';
 
@@ -9,22 +9,33 @@ type ProjectCardProps = {
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
+  const cardBg = useColorModeValue('white', 'gray.800');
+  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
+  const mutedText = useColorModeValue('gray.600', 'gray.300');
+  const summary =
+    project.description.length > 96
+      ? `${project.description.slice(0, 96).trim()}...`
+      : project.description;
+
   return (
     <Box
-      padding={3}
-      width="300px"
-      maxWidth="100%"
-      borderRadius="md"
+      padding={4}
+      width="100%"
+      minH="290px"
+      borderRadius="lg"
+      borderWidth="1px"
+      borderColor={borderColor}
       position="relative"
       onClick={onClick}
       cursor="pointer"
       display="flex"
       flexDirection="column"
-      justifyContent="top"
-      alignItems="center"
-      bgColor="whiteAlpha.100"
+      bg={cardBg}
+      boxShadow="sm"
+      transition="transform 160ms ease, box-shadow 160ms ease"
       _hover={{
-        boxShadow: 'lg',
+        boxShadow: 'xl',
+        transform: 'translateY(-3px)',
         "> div": {
           opacity: '1'
         }
@@ -34,19 +45,31 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         src={project.logo}
         alt={project.altTextLogo}
         objectFit="contain"
-        bgColor="whiteAlpha.700"
-        p={1}
+        bgColor="white"
+        p={3}
         borderRadius="md"
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
+        width="100%"
+        height="120px"
+        borderWidth="1px"
+        borderColor="gray.100"
       />
-      <Text textAlign="center" fontSize="sm" mt={2}>{project.title} - {project.description}</Text>
+      <Text fontWeight="bold" fontSize="lg" mt={4}>{project.title}</Text>
+      <Text color={mutedText} fontSize="sm" mt={2} noOfLines={3}>
+        {summary}
+      </Text>
+      <HStack spacing={2} flexWrap="wrap" mt="auto" pt={4}>
+        {project.technologies.slice(0, 3).map((technology) => (
+          <Badge key={technology} colorScheme="teal" variant="subtle" textTransform="none">
+            {technology}
+          </Badge>
+        ))}
+      </HStack>
       <Box
         position="absolute"
-        top="10px"
-        right="10px"
+        top="14px"
+        right="14px"
         opacity="0"
+        color="teal.500"
       >
         <ViewIcon boxSize={6} />
       </Box>
