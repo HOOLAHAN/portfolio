@@ -78,7 +78,7 @@ const PortfolioContent: React.FC = () => {
 
         <VStack as="section" align="stretch" spacing={6} mt={{ base: 10, md: 14 }}>
           <Box textAlign="center">
-            <Heading ref={projectsRef} size="lg">Construction Foundation</Heading>
+            <Heading ref={projectsRef} size="lg">Construction Experience</Heading>
             <Text color={useColorModeValue('gray.600', 'gray.300')} mt={2}>
               Infrastructure, engineering, surveying, and project management experience.
             </Text>
