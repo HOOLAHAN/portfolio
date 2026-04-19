@@ -23,13 +23,21 @@ const BioModal: React.FC<BioModalProps> = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <Text mt={6} mb={6}>
-          Hi, I'm Iain! I’m a versatile and results-driven professional with a diverse background spanning civil engineering, project management, and software development. My career journey has seen me transition from delivering key infrastructure projects like Hinkley Point C and Crossrail to managing high-end bespoke residential projects for private clients at Harbour Contractors. More recently, I have applied my problem-solving skills to software development, completing intensive training at Makers Academy and building full-stack applications.
+            Hi, I’m Iain — a ServiceNow consultant with a background in civil
+            engineering and construction.
           </Text>
           <Text mb={6}>
-          I thrive on tackling complex challenges, whether in engineering environments or through innovative software solutions. My technical toolkit spans project management, surveying, full-stack development, and client engagement, enabling me to approach problems with a unique blend of practical and technical perspectives.
+            I started my career working on major infrastructure projects like
+            Hinkley Point C and Crossrail, before moving into residential
+            project management. More recently, I’ve transitioned into tech,
+            delivering workflow automation and building digital solutions for
+            enterprise clients.
           </Text>
           <Text>
-          I’m passionate about joining forward-thinking teams where I can leverage my diverse skill set to drive results and continuously learn. I value collaboration and am committed to creating impactful solutions. 
+            I’m at my best working between people and technology —
+            understanding real-world problems and shaping practical,
+            user-focused solutions, particularly within construction and related
+            industries.
           </Text>
         </ModalBody>
         <ModalFooter>
