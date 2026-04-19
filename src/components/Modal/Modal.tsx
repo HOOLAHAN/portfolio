@@ -24,6 +24,7 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
@@ -38,8 +39,12 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
   const contentBg = useColorModeValue('white', 'gray.800');
   const panelBg = useColorModeValue('gray.50', 'gray.900');
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
+  const logoPanelBg = useColorModeValue('white', 'gray.400');
+  const logoPanelBorder = useColorModeValue('gray.100', 'whiteAlpha.300');
   const mutedText = useColorModeValue('gray.600', 'gray.300');
   const hasPreview = project.url !== 'N/A';
+  const hasScreenshots = Boolean(project.screenshots?.length);
+  const hasProjectLinks = hasPreview || project.client_repo !== 'N/A' || project.server_repo !== 'N/A';
 
   const navigateToLink = (url: string) => {
     window.open(url, '_blank');
@@ -61,8 +66,8 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
             <Flex
               align="center"
               justify="center"
-              bg="white"
-              borderColor="gray.100"
+              bg={logoPanelBg}
+              borderColor={logoPanelBorder}
               borderRadius="lg"
               borderWidth="1px"
               flexShrink={0}
@@ -88,38 +93,44 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
               <Text color={mutedText} fontSize={{ base: 'md', md: 'lg' }}>
                 {project.description}
               </Text>
-              <HStack spacing={3} flexWrap="wrap" mt={5}>
-                {hasPreview && (
-                  <Button
-                    colorScheme="teal"
-                    leftIcon={<ExternalLinkIcon />}
-                    size="sm"
-                    onClick={() => navigateToLink(project.url)}
-                  >
-                    Web Page
-                  </Button>
-                )}
-                {project.client_repo !== 'N/A' && (
-                  <Button
-                    colorScheme="gray"
-                    leftIcon={<FaGithub />}
-                    size="sm"
-                    onClick={() => navigateToLink(project.client_repo)}
-                  >
-                    Client Repo
-                  </Button>
-                )}
-                {project.server_repo !== 'N/A' && (
-                  <Button
-                    colorScheme="gray"
-                    leftIcon={<FaGithub />}
-                    size="sm"
-                    onClick={() => navigateToLink(project.server_repo)}
-                  >
-                    Server Repo
-                  </Button>
-                )}
-              </HStack>
+              {hasProjectLinks ? (
+                <HStack spacing={3} flexWrap="wrap" mt={5}>
+                  {hasPreview && (
+                    <Button
+                      colorScheme="teal"
+                      leftIcon={<ExternalLinkIcon />}
+                      size="sm"
+                      onClick={() => navigateToLink(project.url)}
+                    >
+                      Web Page
+                    </Button>
+                  )}
+                  {project.client_repo !== 'N/A' && (
+                    <Button
+                      colorScheme="gray"
+                      leftIcon={<FaGithub />}
+                      size="sm"
+                      onClick={() => navigateToLink(project.client_repo)}
+                    >
+                      Client Repo
+                    </Button>
+                  )}
+                  {project.server_repo !== 'N/A' && (
+                    <Button
+                      colorScheme="gray"
+                      leftIcon={<FaGithub />}
+                      size="sm"
+                      onClick={() => navigateToLink(project.server_repo)}
+                    >
+                      Server Repo
+                    </Button>
+                  )}
+                </HStack>
+              ) : (
+                <Badge colorScheme="gray" mt={5} px={3} py={1} textTransform="none">
+                  Private repository
+                </Badge>
+              )}
             </Box>
           </Flex>
 
@@ -158,6 +169,46 @@ const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
                     height="360"
                     style={{ border: 0, display: 'block' }}
                   />
+                </Box>
+              </Box>
+            )}
+
+            {!hasPreview && hasScreenshots && (
+              <Box mb={6}>
+                <Heading as="h3" size="sm" mb={3}>
+                  App Screens
+                </Heading>
+                <Box
+                  bg={panelBg}
+                  borderColor={borderColor}
+                  borderRadius="lg"
+                  borderWidth="1px"
+                  overflowX="auto"
+                  p={4}
+                >
+                  <SimpleGrid
+                    columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+                    minW={{ base: 'auto', md: '720px' }}
+                    spacing={4}
+                  >
+                    {project.screenshots?.map((screenshot) => (
+                      <Box
+                        key={screenshot.src}
+                        bg="black"
+                        borderColor={borderColor}
+                        borderRadius="2xl"
+                        borderWidth="1px"
+                        overflow="hidden"
+                      >
+                        <Image
+                          src={screenshot.src}
+                          alt={screenshot.alt}
+                          width="100%"
+                          objectFit="cover"
+                        />
+                      </Box>
+                    ))}
+                  </SimpleGrid>
                 </Box>
               </Box>
             )}

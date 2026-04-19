@@ -11,6 +11,8 @@ type ProjectCardProps = {
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
   const cardBg = useColorModeValue('white', 'gray.800');
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
+  const logoPanelBg = useColorModeValue('white', 'gray.400');
+  const logoPanelBorder = useColorModeValue('gray.100', 'whiteAlpha.300');
   const mutedText = useColorModeValue('gray.600', 'gray.300');
   const summary =
     project.description.length > 96
@@ -45,13 +47,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         src={project.logo}
         alt={project.altTextLogo}
         objectFit="contain"
-        bgColor="white"
+        bg={logoPanelBg}
         p={3}
         borderRadius="md"
         width="100%"
         height="120px"
         borderWidth="1px"
-        borderColor="gray.100"
+        borderColor={logoPanelBorder}
       />
       <Text fontWeight="bold" fontSize="lg" mt={4}>{project.title}</Text>
       <Text color={mutedText} fontSize="sm" mt={2} noOfLines={3}>

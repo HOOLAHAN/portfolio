@@ -60,7 +60,7 @@ const PortfolioContent: React.FC = () => {
 
         <VStack as="section" align="stretch" spacing={5} mt={{ base: 8, md: 12 }}>
           <Box textAlign="center">
-            <Heading ref={projectsRef} size="lg">Digital Delivery</Heading>
+            <Heading ref={projectsRef} size="lg">Software Projects</Heading>
             <Text color={useColorModeValue('gray.600', 'gray.300')} mt={2}>
               Selected web applications and side projects demonstrating practical full-stack delivery.
             </Text>

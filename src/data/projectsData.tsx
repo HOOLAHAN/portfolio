@@ -6,6 +6,14 @@ import harbourContractors from '../logos/harbourcontractors.png';
 import yahtzeeLogo from '../logos/yahtzee_logo.png'
 import pfgeomatics from '../logos/pfglogo.png'
 import ijrhservices from '../logos/IJRH_SERVICES_LOGO.png'
+import keenLogo from '../logos/keen.svg'
+import keenScreen1 from '../projects/keen1.png'
+import keenScreen2 from '../projects/keen2.png'
+import keenScreen3 from '../projects/keen3.png'
+import keenScreen4 from '../projects/keen4.png'
+import keenScreen5 from '../projects/keen5.png'
+import keenScreen6 from '../projects/keen6.png'
+import keenScreen7 from '../projects/keen7.png'
 
 export interface Project {
   title: string;
@@ -17,9 +25,52 @@ export interface Project {
   server_repo: string;
   technologies: string[];
   features: [string, string][];
+  screenshots?: {
+    src: string;
+    alt: string;
+  }[];
 }
 
 const projects: Project[] = [
+  {
+    title: "Keen",
+    logo: keenLogo,
+    altTextLogo: "Keen app logo",
+    description: "A mobile social mapping app in development, designed to help users share availability and interests with friends ahead of a planned App Store release",
+    url: "N/A",
+    client_repo: "N/A",
+    server_repo: "N/A",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Expo Router",
+      "Clerk",
+      "Express",
+      "Prisma",
+      "PostgreSQL"
+    ],
+    screenshots: [
+      { src: keenScreen1, alt: "Keen app screenshot 1" },
+      { src: keenScreen2, alt: "Keen app screenshot 2" },
+      { src: keenScreen3, alt: "Keen app screenshot 3" },
+      { src: keenScreen4, alt: "Keen app screenshot 4" },
+      { src: keenScreen5, alt: "Keen app screenshot 5" },
+      { src: keenScreen6, alt: "Keen app screenshot 6" },
+      { src: keenScreen7, alt: "Keen app screenshot 7" }
+    ],
+    features: [
+      ["Mobile App Architecture", "Built with Expo, React Native, TypeScript, and expo-router for file-based navigation across tabs including map, calendar, friends, and profile areas."],
+      ["Authentication", "Uses Clerk for sign-in, sign-up, email verification, authenticated routing, and user profile syncing."],
+      ["Social Mapping", "Designed around helping users share availability and interests with friends, supported by map and friend management screens."],
+      ["Backend API", "Express API with TypeScript routes, controllers, middleware, and Prisma-backed PostgreSQL persistence."],
+      ["User Profiles", "Backend support for creating and syncing user profiles with Clerk webhook events such as user creation and updates."],
+      ["Friendships and Preferences", "Data model supports friendships, plan preferences, availability tracking, and user search preferences."],
+      ["Location Support", "Includes postcode utilities and backend geolocation support for location-aware app behaviour."],
+      ["Operational Tooling", "Includes seed data scripts, Prisma migrations, Clerk webhook development through ngrok, and a sync script to reconcile users after downtime."],
+      ["Release Status", "The app is currently in active development, with deployment to the App Store planned once the core experience is ready."]
+    ]
+  },
   {
     "title": "Yahtzee!",
     "logo": yahtzeeLogo,
