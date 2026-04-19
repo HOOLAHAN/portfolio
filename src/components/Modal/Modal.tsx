@@ -1,16 +1,21 @@
 import React from 'react';
 import { Project } from '../../data/projectsData';
 import {
+  Badge,
   Box,
+  Button,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Image,
   Modal as ChakraModal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalFooter,
   ModalBody,
   ModalCloseButton,
   Text,
-  Button,
   Tag,
   Wrap,
   WrapItem,
@@ -19,7 +24,10 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
+  useColorModeValue,
 } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { FaGithub } from 'react-icons/fa';
 
 type ModalProps = {
   project: Project;
@@ -27,78 +35,159 @@ type ModalProps = {
 };
 
 const Modal: React.FC<ModalProps> = ({ project, onClose }) => {
+  const contentBg = useColorModeValue('white', 'gray.800');
+  const panelBg = useColorModeValue('gray.50', 'gray.900');
+  const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
+  const mutedText = useColorModeValue('gray.600', 'gray.300');
+  const hasPreview = project.url !== 'N/A';
 
   const navigateToLink = (url: string) => {
     window.open(url, '_blank');
   };
 
   return (
-    <ChakraModal isOpen={true} onClose={onClose}>
-      <ModalOverlay />
-      <ModalContent width="800px" maxWidth="90%">
-        <ModalHeader>{project.title}</ModalHeader>
+    <ChakraModal isOpen={true} onClose={onClose} size="5xl" scrollBehavior="inside">
+      <ModalOverlay bg="blackAlpha.700" backdropFilter="blur(4px)" />
+      <ModalContent bg={contentBg} mx={4} overflow="hidden">
         <ModalCloseButton />
-        <ModalBody>
-          <Text mb={2}>{project.description}</Text>
-          <Text fontWeight="bold" mb={2}>Technologies Used:</Text>
-          <Wrap>
-            {project.technologies.map((tech, index) => (
-              <WrapItem key={index}>
-                <Tag size="md" variant="solid" colorScheme="blue">
-                  {tech}
-                </Tag>
-              </WrapItem>
-            ))}
-          </Wrap>
-          <Box mt={4}>
-            <Text fontWeight="bold" mb={2}>Links:</Text>
-            {project.url !== "N/A" && (
-              <Button mr={2} mb={2} size="sm" colorScheme="blue" onClick={() => navigateToLink(project.url)}>
-                Web Page
-              </Button>
+        <ModalBody p={0}>
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            gap={{ base: 5, md: 6 }}
+            p={{ base: 5, md: 7 }}
+            borderBottomWidth="1px"
+            borderColor={borderColor}
+          >
+            <Flex
+              align="center"
+              justify="center"
+              bg="white"
+              borderColor="gray.100"
+              borderRadius="lg"
+              borderWidth="1px"
+              flexShrink={0}
+              h={{ base: '140px', md: '170px' }}
+              p={4}
+              w={{ base: '100%', md: '220px' }}
+            >
+              <Image
+                src={project.logo}
+                alt={project.altTextLogo}
+                maxH="100%"
+                maxW="100%"
+                objectFit="contain"
+              />
+            </Flex>
+            <Box flex="1" pr={{ base: 8, md: 10 }}>
+              <Badge colorScheme="teal" mb={3} textTransform="none">
+                Project Detail
+              </Badge>
+              <Heading as="h2" size="xl" mb={3}>
+                {project.title}
+              </Heading>
+              <Text color={mutedText} fontSize={{ base: 'md', md: 'lg' }}>
+                {project.description}
+              </Text>
+              <HStack spacing={3} flexWrap="wrap" mt={5}>
+                {hasPreview && (
+                  <Button
+                    colorScheme="teal"
+                    leftIcon={<ExternalLinkIcon />}
+                    size="sm"
+                    onClick={() => navigateToLink(project.url)}
+                  >
+                    Web Page
+                  </Button>
+                )}
+                {project.client_repo !== 'N/A' && (
+                  <Button
+                    colorScheme="gray"
+                    leftIcon={<FaGithub />}
+                    size="sm"
+                    onClick={() => navigateToLink(project.client_repo)}
+                  >
+                    Client Repo
+                  </Button>
+                )}
+                {project.server_repo !== 'N/A' && (
+                  <Button
+                    colorScheme="gray"
+                    leftIcon={<FaGithub />}
+                    size="sm"
+                    onClick={() => navigateToLink(project.server_repo)}
+                  >
+                    Server Repo
+                  </Button>
+                )}
+              </HStack>
+            </Box>
+          </Flex>
+
+          <Box p={{ base: 5, md: 7 }}>
+            <Box mb={6}>
+              <Heading as="h3" size="sm" mb={3}>
+                Technologies
+              </Heading>
+              <Wrap>
+                {project.technologies.map((tech, index) => (
+                  <WrapItem key={index}>
+                    <Tag size="md" variant="subtle" colorScheme="teal">
+                      {tech}
+                    </Tag>
+                  </WrapItem>
+                ))}
+              </Wrap>
+            </Box>
+
+            {hasPreview && (
+              <Box mb={6}>
+                <Heading as="h3" size="sm" mb={3}>
+                  Website Preview
+                </Heading>
+                <Box
+                  bg={panelBg}
+                  borderColor={borderColor}
+                  borderRadius="lg"
+                  borderWidth="1px"
+                  overflow="hidden"
+                >
+                  <iframe
+                    src={project.url}
+                    title={project.title}
+                    width="100%"
+                    height="360"
+                    style={{ border: 0, display: 'block' }}
+                  />
+                </Box>
+              </Box>
             )}
-            {project.client_repo !== "N/A" && (
-              <Button mr={2} mb={2} size="sm" colorScheme="green" onClick={() => navigateToLink(project.client_repo)}>
-                Github Repo - Client
-              </Button>
-            )}
-            {project.server_repo !== "N/A" && (
-              <Button mr={2} mb={2} size="sm" colorScheme="teal" onClick={() => navigateToLink(project.server_repo)}>
-                Github Repo - Server
-              </Button>
-            )}
+
+            <Divider mb={6} />
+
+            <Box>
+              <Heading as="h3" size="sm" mb={3}>
+                Features
+              </Heading>
+              <Accordion allowToggle borderColor={borderColor}>
+                {project.features.map((feature, index) => (
+                  <AccordionItem key={index}>
+                    <AccordionButton px={0}>
+                      <Box flex="1" textAlign="left" fontWeight="semibold">
+                        {feature[0]}
+                      </Box>
+                      <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel color={mutedText} px={0} pb={4}>
+                      {feature[1]}
+                    </AccordionPanel>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </Box>
           </Box>
-          <Box mt={4}>
-            <Text fontWeight="bold" mb={2}>Website Preview:</Text>
-            <iframe
-              src={project.url}
-              title={project.title}
-              width="100%"
-              height="300"
-              style={{ border: '1px solid #ccc' }}
-            />
-          </Box>
-          <Box mt={4}>
-            <Text fontWeight="bold" mb={2}>Features:</Text>
-            <Accordion allowToggle>
-              {project.features.map((feature, index) => (
-                <AccordionItem key={index}>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      {feature[0]}
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                  <AccordionPanel pb={4}>
-                    {feature[1]}
-                  </AccordionPanel>
-                </AccordionItem>
-              ))}
-            </Accordion>
-        </Box>
         </ModalBody>
-        <ModalFooter>
-          <Button colorScheme="blue" mr={3} onClick={onClose}>
+        <ModalFooter borderTopWidth="1px" borderColor={borderColor}>
+          <Button colorScheme="teal" onClick={onClose}>
             Close
           </Button>
         </ModalFooter>

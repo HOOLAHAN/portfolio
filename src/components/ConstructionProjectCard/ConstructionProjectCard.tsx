@@ -2,19 +2,24 @@ import React from 'react';
 import {
   Badge,
   Box,
+  Divider,
+  Flex,
+  Heading,
   HStack,
   Image,
   Text,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalCloseButton,
   ModalBody,
+  ModalFooter,
+  Button,
   useColorModeValue,
   useDisclosure,
 } from '@chakra-ui/react';
 import { ViewIcon } from '@chakra-ui/icons';
+import { FaBuilding, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 interface ConstructionProjectCardProps {
   project: {
@@ -31,8 +36,11 @@ interface ConstructionProjectCardProps {
 const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ project, company }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cardBg = useColorModeValue('white', 'gray.800');
+  const modalBg = useColorModeValue('white', 'gray.800');
+  const panelBg = useColorModeValue('gray.50', 'gray.900');
   const borderColor = useColorModeValue('gray.200', 'whiteAlpha.200');
   const mutedText = useColorModeValue('gray.600', 'gray.300');
+  const projectImage = require(`../../projects/${project.image}`);
 
   return (
     <Box
@@ -59,7 +67,7 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
       }}
     >
       <Image
-        src={require(`../../projects/${project.image}`)}
+        src={projectImage}
         alt={project.projectName}
         height="150px"
         width="100%"
@@ -87,18 +95,103 @@ const ConstructionProjectCard: React.FC<ConstructionProjectCardProps> = ({ proje
         <ViewIcon boxSize={6} />
       </Box>
 
-      <Modal isOpen={isOpen} onClose={onClose} size="lg">
-        <ModalOverlay />
-        <ModalContent mx={4}>
-          <ModalHeader>{project.projectName}</ModalHeader>
+      <Modal isOpen={isOpen} onClose={onClose} size="4xl" scrollBehavior="inside">
+        <ModalOverlay bg="blackAlpha.700" backdropFilter="blur(4px)" />
+        <ModalContent bg={modalBg} mx={4} overflow="hidden">
           <ModalCloseButton />
-          <ModalBody>
-            <Text mb={1}><strong>Company:</strong> {company}</Text>
-            <Text mb={1}><strong>Location:</strong> {project.location}</Text>
-            <Text mb={1}><strong>Start Date:</strong> {project.startDate}</Text>
-            <Text mb={4}><strong>End Date:</strong> {project.endDate}</Text>
-            <Text>{project.details}</Text>
+          <ModalBody p={0}>
+            <Box position="relative">
+              <Image
+                src={projectImage}
+                alt={project.projectName}
+                height={{ base: '210px', md: '320px' }}
+                width="100%"
+                objectFit="cover"
+              />
+              <Box
+                position="absolute"
+                inset={0}
+                bgGradient="linear(to-t, blackAlpha.800, transparent 65%)"
+              />
+              <Box
+                bottom={0}
+                color="white"
+                left={0}
+                p={{ base: 5, md: 7 }}
+                position="absolute"
+                right={0}
+              >
+                <Badge colorScheme="teal" mb={3} textTransform="none">
+                  Construction Project
+                </Badge>
+                <Heading as="h2" size={{ base: 'lg', md: 'xl' }}>
+                  {project.projectName}
+                </Heading>
+              </Box>
+            </Box>
+
+            <Box p={{ base: 5, md: 7 }}>
+              <Flex
+                bg={panelBg}
+                borderColor={borderColor}
+                borderRadius="lg"
+                borderWidth="1px"
+                direction={{ base: 'column', md: 'row' }}
+                gap={4}
+                mb={6}
+                p={4}
+              >
+                <HStack flex="1" spacing={3}>
+                  <Box color="teal.500">
+                    <FaBuilding />
+                  </Box>
+                  <Box>
+                    <Text color={mutedText} fontSize="xs" fontWeight="bold" textTransform="uppercase">
+                      Company
+                    </Text>
+                    <Text fontWeight="semibold">{company}</Text>
+                  </Box>
+                </HStack>
+                <HStack flex="1" spacing={3}>
+                  <Box color="teal.500">
+                    <FaMapMarkerAlt />
+                  </Box>
+                  <Box>
+                    <Text color={mutedText} fontSize="xs" fontWeight="bold" textTransform="uppercase">
+                      Location
+                    </Text>
+                    <Text fontWeight="semibold">{project.location}</Text>
+                  </Box>
+                </HStack>
+                <HStack flex="1" spacing={3}>
+                  <Box color="teal.500">
+                    <FaCalendarAlt />
+                  </Box>
+                  <Box>
+                    <Text color={mutedText} fontSize="xs" fontWeight="bold" textTransform="uppercase">
+                      Period
+                    </Text>
+                    <Text fontWeight="semibold">
+                      {project.startDate} - {project.endDate}
+                    </Text>
+                  </Box>
+                </HStack>
+              </Flex>
+
+              <Heading as="h3" size="sm" mb={3}>
+                Project Detail
+              </Heading>
+              <Text color={mutedText} fontSize={{ base: 'md', md: 'lg' }}>
+                {project.details}
+              </Text>
+              <Divider mt={6} />
+            </Box>
           </ModalBody>
+          <ModalFooter borderTopWidth="1px" borderColor={borderColor}>
+            <Button colorScheme="teal" onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
         </ModalContent>
       </Modal>
     </Box>
