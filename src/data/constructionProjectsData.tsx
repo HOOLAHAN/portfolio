@@ -17,6 +17,14 @@ const constructionProjects: ConstructionProject[] = [
     website: "https://www.pfgeomatics.com/",
     projects: [
       {
+        projectName: "41 Tower Hill",
+        image: "41_tower_hill.png",
+        startDate: "2024",
+        endDate: "2025",
+        location: "Tower Hill, London",
+        details: "At 41 Tower Hill, I supported CR Construction on a commercial refurbishment project involving comprehensive control checks and detailed surveys of existing levels. My work included setting out gridlines and datums for the blockwork team, helping ensure their work aligned accurately with the project requirements. I also marked out structural openings for the demolition team, supporting a smooth and efficient delivery process."
+      },
+      {
         projectName: "105 Victoria Street",
         image: "victoria_street.png",
         startDate: "June 2024",
