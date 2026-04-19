@@ -23,7 +23,7 @@ const BioModal: React.FC<BioModalProps> = ({ isOpen, onClose }) => {
         <ModalCloseButton />
         <ModalBody>
           <Text mt={6} mb={6}>
-            Hi, I’m Iain — a ServiceNow consultant with a background in civil
+            Hi, I’m Iain. A ServiceNow consultant with a background in civil
             engineering and construction.
           </Text>
           <Text mb={6}>
@@ -34,7 +34,7 @@ const BioModal: React.FC<BioModalProps> = ({ isOpen, onClose }) => {
             enterprise clients.
           </Text>
           <Text>
-            I’m at my best working between people and technology —
+            I’m at my best working between people and technology -
             understanding real-world problems and shaping practical,
             user-focused solutions, particularly within construction and related
             industries.
